@@ -13,7 +13,7 @@ from psycopg2 import sql
 def get_data_all(url) -> list:
     # Set Chrome options to run headlessly (without a GUI)
     browser_options = ChromeOptions()
-    browser_options.headless = True
+    browser_options.headless = False
     # Initialize Chrome driver and navigate to provided URL
     driver = Chrome(options=browser_options)
     driver.get(url)
@@ -22,7 +22,7 @@ def get_data_all(url) -> list:
     while True:
         try:
             element = WebDriverWait(driver, 5).until(
-                EC.presence_of_element_located((By.CSS_SELECTOR, "span.button--greenWhite"))
+                EC.presence_of_element_located((By.CSS_SELECTOR, "a.js-searchPagination"))
             )
             element.click()
             time.sleep(5)
@@ -115,8 +115,11 @@ def get_data(url) -> list:
             break
 
     # Find information about each cottage on the page
-    cottages = driver.find_elements(By.CSS_SELECTOR, "div.accCart-informationContainer")
-    data = []
+    try:
+        cottages = driver.find_elements(By.CSS_SELECTOR, "div.accCart-informationContainer")
+        data = []
+    except NoSuchElementException:
+            raise Exception("Error: could not extract cottage information")
 
     # For each cottage, extract relevant information and add to a dictionary
     for cottage in cottages:
@@ -208,8 +211,17 @@ def main():
     # Print a message indicating the number of scraped cottages and the location of the CSV file
         print(f"{len(data)} cottages scraped and saved to {vacation_park}_cottages.csv in the {country} folder")
     if program == ("yes"):
+        program_cat = input("Do you want to scrape vacation or offers? ")
         #url to the page that needs to be scraped
-        url = "https://www.centerparcs.be/be-vl/last-minutes_sck"
+        if program_cat == ("offers"):
+            offer = input("What type of offer (last-minutes, ecocheques)? ")
+            if offer == ("last-minutes"):
+                url = "https://www.centerparcs.be/be-vl/last-minutes_sck?market=be&language=vl&c=CPE_SINGLECLICK_V3&univers=cpe&type=SINGLECLICK_V3&item=280&currency=EUR&group=housing&sort=popularity_housing&asc=asc&page=1&nb=10&displayPrice=default&dateuser=0&facet[HOUSINGCATEGORY][]=COMFORT&facet[HOUSINGCATEGORY][]=PREMIUM&facet[HOUSINGCATEGORY][]=VIP&facet[HOUSINGCATEGORY][]=EXCLUSIVE&facet[HOUSINGCATEGORY][]=25&facet[HOUSINGCATEGORY][]=31&facet[HOUSINGCATEGORY][]=32&facet[HOUSINGCATEGORY][]=33&facet[HOUSINGCATEGORY][]=37&facet[HOUSINGCATEGORY][]=64&facet[HOUSINGCATEGORY][]=65&facet[PARTICIPANTSCP][adult]=2&facet[PARTICIPANTSCP][pet]=2"
+            if offer == ("ecocheques"):
+                url = "https://www.centerparcs.be/be-vl/ecocheques_sck?market=be&language=vl&c=CPE_SINGLECLICK&univers=cpe&type=SINGLECLICK&item=1150&currency=EUR&group=housing&sort=popularity_housing&asc=asc&page=1&nb=10&displayPrice=default&dateuser=0&facet[COUNTRYSITE][]=l1_BE&facet[COUNTRYSITE][]=l1_NL&facet[COUNTRYSITE][]=l1_DE&facet[PARTICIPANTSCP][adult]=2&facet[PARTICIPANTSCP][pet]=2"
+        if program_cat == ("vacation"):
+            vacation = input("What type of vacation (paasvakantie, hemelvaart-weekend-weg, pinksteren-weekend-weg, zomervakantie, herfstvakantie, 11-november, kerstvakantie, krokusvakantie)? ")
+            url = f"https://www.centerparcs.be/be-vl/{vacation}_sck"
         data = get_data_all(url)
         print(f"{len(data)} cottages scraped and saved to database")
    
