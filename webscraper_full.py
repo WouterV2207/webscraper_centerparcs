@@ -180,14 +180,24 @@ def get_data(url) -> list:
     return data
 
 def main():
-    program = input("Do you want to scrape all cottages, true or false: ")
-    if program == ("false"):
-           #user inputs that need to be filled in for the url
-        country = input("Enter a country: ")
-        vacation_park = input("Enter a vacation park name: ")
-        vacation_park_code = input("Enter a vacation park code: ")
-        #url to the page that needs to be scraped
-        url = f"https://www.centerparcs.be/be-vl/{country}/fp_{vacation_park_code}_vakantiepark-{vacation_park}/cottages?market=be&language=vl&c=CPE_PRODUCT&univers=cpe&type=PRODUCT_COTTAGES&item=HB&currency=EUR&group=housing&sort=popularity_housing&asc=asc&page=1&nb=30&displayPrice=default&dateuser=0&facet[HOUSINGCATEGORY][]=COMFORT&facet[HOUSINGCATEGORY][]=PREMIUM&facet[HOUSINGCATEGORY][]=VIP&facet[HOUSINGCATEGORY][]=EXCLUSIVE&facet[DISPO]=-1&facet[COUNTRYSITE][]=l2_HB&facet[PARTICIPANTSCP][adult]=2"
+    #user inputs that need to be filled in for the url
+    program = input("Do you want to scrape all cottages, yes or no: ")
+    if program == ("no"):
+        program_date = input("Do you want to fill in a specific date, yes or no: ")
+        if program_date == ("yes"):
+            arr_date = input("fill in an arrival date, yyyy-mm-dd: ")
+            ret_date = input("fill in a return date, yyyy-mm-dd: ")
+            country = input("Enter a country: ")
+            vacation_park = input("Enter a vacation park name: ")
+            vacation_park_code = input("Enter a vacation park code: ")
+            #url to the page that needs to be scraped
+            url = f"https://www.centerparcs.be/be-vl/{country}/fp_{vacation_park_code}_vakantiepark-{vacation_park}/cottages?market=be&language=vl&c=CPE_PRODUCT&univers=cpe&type=PRODUCT_COTTAGES&item=TH&currency=EUR&group=housing&sort=popularity_housing&asc=asc&page=1&nb=30&displayPrice=default&dateuser=1&facet[HOUSINGCATEGORY][]=COMFORT&facet[HOUSINGCATEGORY][]=PREMIUM&facet[HOUSINGCATEGORY][]=VIP&facet[HOUSINGCATEGORY][]=EXCLUSIVE&facet[DISPO]=-1&facet[DATE]={arr_date}&facet[DATEEND]={ret_date}&facet[COUNTRYSITE][]=l2_TH&facet[PARTICIPANTSCP][adult]=2"
+        if program_date == ("no"):
+            country = input("Enter a country: ")
+            vacation_park = input("Enter a vacation park name: ")
+            vacation_park_code = input("Enter a vacation park code: ")
+            #url to the page that needs to be scraped
+            url = f"https://www.centerparcs.be/be-vl/{country}/fp_{vacation_park_code}_vakantiepark-{vacation_park}/cottages?market=be&language=vl&c=CPE_PRODUCT&univers=cpe&type=PRODUCT_COTTAGES&item=HB&currency=EUR&group=housing&sort=popularity_housing&asc=asc&page=1&nb=30&displayPrice=default&dateuser=0&facet[HOUSINGCATEGORY][]=COMFORT&facet[HOUSINGCATEGORY][]=PREMIUM&facet[HOUSINGCATEGORY][]=VIP&facet[HOUSINGCATEGORY][]=EXCLUSIVE&facet[DISPO]=-1&facet[COUNTRYSITE][]=l2_HB&facet[PARTICIPANTSCP][adult]=2"
         data = get_data(url)
 
     # write data to csv file
@@ -197,7 +207,7 @@ def main():
             writer.writerows(data)
     # Print a message indicating the number of scraped cottages and the location of the CSV file
         print(f"{len(data)} cottages scraped and saved to {vacation_park}_cottages.csv in the {country} folder")
-    if program == ("true"):
+    if program == ("yes"):
         #url to the page that needs to be scraped
         url = "https://www.centerparcs.be/be-vl/last-minutes_sck"
         data = get_data_all(url)
