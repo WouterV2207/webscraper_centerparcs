@@ -13,7 +13,7 @@ from psycopg2 import sql
 def get_data_all(url) -> list:
     # Set Chrome options to run headlessly (without a GUI)
     browser_options = ChromeOptions()
-    browser_options.headless = True
+    browser_options.headless = False
     # Initialize Chrome driver and navigate to provided URL
     driver = Chrome(options=browser_options)
     driver.get(url)
@@ -35,6 +35,7 @@ def get_data_all(url) -> list:
     for cottage in cottages:
         title = cottage.find_element(By.CSS_SELECTOR, "div.accCart-title")
         new_price = cottage.find_element(By.CSS_SELECTOR, "span.accCart-price")
+        old_price = cottage.find_element(By.CSS_SELECTOR, "div.accCart-priceContainer")
         amount = cottage.find_element(By.CSS_SELECTOR, "li.accCart-specificationsItem")
         date = cottage.find_element(By.CSS_SELECTOR, "div.accCart-duration")
         bedroom = cottage.find_element(By.CSS_SELECTOR, "li.accCart-specificationsItem:nth-child(2)")
@@ -46,7 +47,8 @@ def get_data_all(url) -> list:
         str_date_time = date_time.strftime("%d-%m-%Y, %H:%M:%S")
         cottage_item = {
             'title': title.text,
-            'price': new_price.text,
+            'new_price': new_price.text,
+            'old_price': old_price.text,
             'amount_of_persons': amount.text,
             'bedroom': bedroom.text,
             'duration': date.text,
@@ -96,7 +98,7 @@ def get_data_all(url) -> list:
 def get_data(url) -> list:
     # Set Chrome options to run headlessly (without a GUI)
     browser_options = ChromeOptions()
-    browser_options.headless = True
+    browser_options.headless = False
     # Initialize Chrome driver and navigate to provided URL
     driver = Chrome(options=browser_options)
     driver.get(url)
@@ -128,6 +130,7 @@ def get_data(url) -> list:
             new_price = cottage.find_element(By.CSS_SELECTOR, "span.accCart-price")
         except NoSuchElementException:
             continue
+        old_price = cottage.find_element(By.CSS_SELECTOR, "div.accCart-priceContainer")
         amount = cottage.find_element(By.CSS_SELECTOR, "li.accCart-specificationsItem")
         date = cottage.find_element(By.CSS_SELECTOR, "div.accCart-duration")
         bedroom = cottage.find_element(By.CSS_SELECTOR, "li.accCart-specificationsItem:nth-child(2)")
@@ -137,7 +140,8 @@ def get_data(url) -> list:
         str_date_time = date_time.strftime("%d-%m-%Y, %H:%M:%S")
         cottage_item = {
             'title': title.text,
-            'price': new_price.text,
+            'new_price': new_price.text,
+            'old_price': old_price.text,
             'amount_of_persons': amount.text,
             'bedroom': bedroom.text,
             'duration': date.text,
@@ -186,6 +190,15 @@ def main():
     #user inputs that need to be filled in for the url
     program = input("Do you want to scrape all cottages, yes or no: ")
     if program == ("no"):
+        program_person = input("Do you want to fill in a specific amount of persons? ")
+        if program_person == ("yes"):
+            am_adults = input("How many adults? ")
+            am_pets = input("How many pets? ")
+            am_seniors = input("How many seniors? ")
+        else:
+            am_adults = 0
+            am_pets = 0
+            am_seniors = 0
         program_date = input("Do you want to fill in a specific date, yes or no: ")
         if program_date == ("yes"):
             arr_date = input("fill in an arrival date, yyyy-mm-dd: ")
@@ -194,13 +207,13 @@ def main():
             vacation_park = input("Enter a vacation park name: ")
             vacation_park_code = input("Enter a vacation park code: ")
             #url to the page that needs to be scraped
-            url = f"https://www.centerparcs.be/be-vl/{country}/fp_{vacation_park_code}_vakantiepark-{vacation_park}/cottages?market=be&language=vl&c=CPE_PRODUCT&univers=cpe&type=PRODUCT_COTTAGES&item=TH&currency=EUR&group=housing&sort=popularity_housing&asc=asc&page=1&nb=30&displayPrice=default&dateuser=1&facet[HOUSINGCATEGORY][]=COMFORT&facet[HOUSINGCATEGORY][]=PREMIUM&facet[HOUSINGCATEGORY][]=VIP&facet[HOUSINGCATEGORY][]=EXCLUSIVE&facet[DISPO]=-1&facet[DATE]={arr_date}&facet[DATEEND]={ret_date}&facet[COUNTRYSITE][]=l2_TH&facet[PARTICIPANTSCP][adult]=2"
+            url = f"https://www.centerparcs.be/be-vl/{country}/fp_{vacation_park_code}_vakantiepark-{vacation_park}/cottages?market=be&language=vl&c=CPE_PRODUCT&univers=cpe&type=PRODUCT_COTTAGES&item=TH&currency=EUR&group=housing&sort=popularity_housing&asc=asc&page=1&nb=30&displayPrice=default&dateuser=1&facet[HOUSINGCATEGORY][]=COMFORT&facet[HOUSINGCATEGORY][]=PREMIUM&facet[HOUSINGCATEGORY][]=VIP&facet[HOUSINGCATEGORY][]=EXCLUSIVE&facet[DISPO]=-1&facet[DATE]={arr_date}&facet[DATEEND]={ret_date}&facet[COUNTRYSITE][]=l2_TH&facet[PARTICIPANTSCP][adult]={am_adults}&facet[PARTICIPANTSCP][senior]={am_seniors}&facet[PARTICIPANTSCP][pet]={am_pets}"
         if program_date == ("no"):
             country = input("Enter a country: ")
             vacation_park = input("Enter a vacation park name: ")
             vacation_park_code = input("Enter a vacation park code: ")
             #url to the page that needs to be scraped
-            url = f"https://www.centerparcs.be/be-vl/{country}/fp_{vacation_park_code}_vakantiepark-{vacation_park}/cottages?market=be&language=vl&c=CPE_PRODUCT&univers=cpe&type=PRODUCT_COTTAGES&item=HB&currency=EUR&group=housing&sort=popularity_housing&asc=asc&page=1&nb=30&displayPrice=default&dateuser=0&facet[HOUSINGCATEGORY][]=COMFORT&facet[HOUSINGCATEGORY][]=PREMIUM&facet[HOUSINGCATEGORY][]=VIP&facet[HOUSINGCATEGORY][]=EXCLUSIVE&facet[DISPO]=-1&facet[COUNTRYSITE][]=l2_HB&facet[PARTICIPANTSCP][adult]=2"
+            url = f"https://www.centerparcs.be/be-vl/{country}/fp_{vacation_park_code}_vakantiepark-{vacation_park}/cottages?market=be&language=vl&c=CPE_PRODUCT&univers=cpe&type=PRODUCT_COTTAGES&item=HB&currency=EUR&group=housing&sort=popularity_housing&asc=asc&page=1&nb=30&displayPrice=default&dateuser=0&facet[HOUSINGCATEGORY][]=COMFORT&facet[HOUSINGCATEGORY][]=PREMIUM&facet[HOUSINGCATEGORY][]=VIP&facet[HOUSINGCATEGORY][]=EXCLUSIVE&facet[DISPO]=-1&facet[COUNTRYSITE][]=l2_HB&facet[PARTICIPANTSCP][adult]={am_adults}&facet[PARTICIPANTSCP][senior]={am_seniors}&facet[PARTICIPANTSCP][pet]={am_pets}"
         data = get_data(url)
 
     # write data to csv file
