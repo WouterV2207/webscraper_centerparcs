@@ -190,15 +190,22 @@ def main():
     #user inputs that need to be filled in for the url
     program = input("Do you want to scrape all cottages, yes or no: ")
     if program == ("no"):
-        program_person = input("Do you want to fill in a specific amount of persons? ")
+        program_person = input("Do you want to fill in a specific amount of persons, yes or no: ")
         if program_person == ("yes"):
             am_adults = input("How many adults? ")
-            am_pets = input("How many pets? ")
+            am_pets = input("How many pets? (max. 2)")
             am_seniors = input("How many seniors? ")
+            am_children = int(input("How many children? "))
+            children_ages = []
+            for i in range(int(am_children)):
+                age = input(f"Enter age of child {i+1}: ")
+                children_ages.append(age)
         else:
             am_adults = 0
             am_pets = 0
             am_seniors = 0
+            am_children = 0
+            children_ages = []
         program_date = input("Do you want to fill in a specific date, yes or no: ")
         if program_date == ("yes"):
             arr_date = input("fill in an arrival date, yyyy-mm-dd: ")
@@ -208,12 +215,16 @@ def main():
             vacation_park_code = input("Enter a vacation park code: ")
             #url to the page that needs to be scraped
             url = f"https://www.centerparcs.be/be-vl/{country}/fp_{vacation_park_code}_vakantiepark-{vacation_park}/cottages?market=be&language=vl&c=CPE_PRODUCT&univers=cpe&type=PRODUCT_COTTAGES&item=TH&currency=EUR&group=housing&sort=popularity_housing&asc=asc&page=1&nb=30&displayPrice=default&dateuser=1&facet[HOUSINGCATEGORY][]=COMFORT&facet[HOUSINGCATEGORY][]=PREMIUM&facet[HOUSINGCATEGORY][]=VIP&facet[HOUSINGCATEGORY][]=EXCLUSIVE&facet[DISPO]=-1&facet[DATE]={arr_date}&facet[DATEEND]={ret_date}&facet[COUNTRYSITE][]=l2_TH&facet[PARTICIPANTSCP][adult]={am_adults}&facet[PARTICIPANTSCP][senior]={am_seniors}&facet[PARTICIPANTSCP][pet]={am_pets}"
+            for age in children_ages:
+                url += f"&facet[PARTICIPANTSCP][ages][]={age}"
         if program_date == ("no"):
             country = input("Enter a country: ")
             vacation_park = input("Enter a vacation park name: ")
             vacation_park_code = input("Enter a vacation park code: ")
             #url to the page that needs to be scraped
             url = f"https://www.centerparcs.be/be-vl/{country}/fp_{vacation_park_code}_vakantiepark-{vacation_park}/cottages?market=be&language=vl&c=CPE_PRODUCT&univers=cpe&type=PRODUCT_COTTAGES&item=HB&currency=EUR&group=housing&sort=popularity_housing&asc=asc&page=1&nb=30&displayPrice=default&dateuser=0&facet[HOUSINGCATEGORY][]=COMFORT&facet[HOUSINGCATEGORY][]=PREMIUM&facet[HOUSINGCATEGORY][]=VIP&facet[HOUSINGCATEGORY][]=EXCLUSIVE&facet[DISPO]=-1&facet[COUNTRYSITE][]=l2_HB&facet[PARTICIPANTSCP][adult]={am_adults}&facet[PARTICIPANTSCP][senior]={am_seniors}&facet[PARTICIPANTSCP][pet]={am_pets}"
+            for age in children_ages:
+                url += f"&facet[PARTICIPANTSCP][ages][]={age}"
         data = get_data(url)
 
     # write data to csv file
