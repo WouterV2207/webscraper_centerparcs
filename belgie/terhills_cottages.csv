@@ -1,19 +1,12 @@
-title,new_price,old_price,amount_of_persons,bedroom,duration,surface,country,vacation_parc,timestamp,discount
-VIP cottage Rolstoelvriendelijk,306,339,4 pers.,2 Slaapkamers,Van ma. 15 tot wo. 17 mei.,84 m²,"België, Limburg, Dilsen-Stokkem",Terhills Resort by Center Parcs,"15-03-2023, 11:25:51",33
-VIP cottage,239,389,4 pers.,2 Slaapkamers,Van wo. 15 tot vr. 17 mrt.,77 m²,"België, Limburg, Dilsen-Stokkem",Terhills Resort by Center Parcs,"15-03-2023, 11:25:52",150
-VIP cottage,349,399,2 pers.,1 Slaapkamer,Van ma. 15 tot wo. 17 mei.,58 m²,"België, Limburg, Dilsen-Stokkem",Terhills Resort by Center Parcs,"15-03-2023, 11:25:52",50
-Exclusive cottage,351,389,4 pers.,2 Slaapkamers,Van ma. 15 tot wo. 17 mei.,77 m²,"België, Limburg, Dilsen-Stokkem",Terhills Resort by Center Parcs,"15-03-2023, 11:25:53",38
-Exclusive Lakeside cottage,369,409,4 pers.,2 Slaapkamers,Van ma. 15 tot wo. 17 mei.,77 m²,"België, Limburg, Dilsen-Stokkem",Terhills Resort by Center Parcs,"15-03-2023, 11:25:53",40
-Exclusive cottage,519,859,2 pers.,1 Slaapkamer,Van vr. 31 mrt. tot ma. 3 apr.,58 m²,"België, Limburg, Dilsen-Stokkem",Terhills Resort by Center Parcs,"15-03-2023, 11:25:53",340
-VIP Lakeside cottage,1593,1769,4 pers.,2 Slaapkamers,Van vr. 19 tot ma. 22 mei.,77 m²,"België, Limburg, Dilsen-Stokkem",Terhills Resort by Center Parcs,"15-03-2023, 11:25:54",176
-VIP cottage Rolstoelvriendelijk,289,429,6 pers.,3 Slaapkamers,Van ma. 20 tot wo. 22 mrt.,105 m²,"België, Limburg, Dilsen-Stokkem",Terhills Resort by Center Parcs,"15-03-2023, 11:25:54",140
-VIP cottage,249,429,6 pers.,3 Slaapkamers,Van wo. 15 tot vr. 17 mrt.,98 m²,"België, Limburg, Dilsen-Stokkem",Terhills Resort by Center Parcs,"15-03-2023, 11:25:55",180
-VIP cottage,309,559,8 pers.,4 Slaapkamers,Van wo. 15 tot vr. 17 mrt.,125 m²,"België, Limburg, Dilsen-Stokkem",Terhills Resort by Center Parcs,"15-03-2023, 11:25:55",250
-VIP Lakeside cottage,369,599,8 pers.,4 Slaapkamers,Van di. 21 tot do. 23 mrt.,125 m²,"België, Limburg, Dilsen-Stokkem",Terhills Resort by Center Parcs,"15-03-2023, 11:25:56",230
-Exclusive cottage,387,429,6 pers.,3 Slaapkamers,Van ma. 15 tot wo. 17 mei.,98 m²,"België, Limburg, Dilsen-Stokkem",Terhills Resort by Center Parcs,"15-03-2023, 11:25:56",42
-Exclusive Lakeside cottage,389,689,8 pers.,4 Slaapkamers,Van wo. 15 tot vr. 17 mrt.,125 m²,"België, Limburg, Dilsen-Stokkem",Terhills Resort by Center Parcs,"15-03-2023, 11:25:57",300
-VIP Lakeside cottage,396,439,6 pers.,3 Slaapkamers,Van ma. 15 tot wo. 17 mei.,98 m²,"België, Limburg, Dilsen-Stokkem",Terhills Resort by Center Parcs,"15-03-2023, 11:25:57",43
-Exclusive Lakeside cottage,459,509,6 pers.,3 Slaapkamers,Van ma. 15 tot wo. 17 mei.,98 m²,"België, Limburg, Dilsen-Stokkem",Terhills Resort by Center Parcs,"15-03-2023, 11:25:58",50
-VIP cottage,509,789,12 pers.,6 Slaapkamers,Van wo. 22 tot vr. 24 mrt.,182 m²,"België, Limburg, Dilsen-Stokkem",Terhills Resort by Center Parcs,"15-03-2023, 11:25:58",280
-Exclusive Lakeside cottage,589,1009,12 pers.,6 Slaapkamers,Van wo. 15 tot vr. 17 mrt.,182 m²,"België, Limburg, Dilsen-Stokkem",Terhills Resort by Center Parcs,"15-03-2023, 11:25:58",420
-Exclusive cottage,739,949,12 pers.,6 Slaapkamers,Van wo. 15 tot vr. 17 mrt.,182 m²,"België, Limburg, Dilsen-Stokkem",Terhills Resort by Center Parcs,"15-03-2023, 11:25:59",210
+title,new_price,old_price,amount_of_persons,bedroom,duration,surface,country,vacation_parc,timestamp,discount_in_euros,discount_in_percent
+VIP cottage Rolstoelvriendelijk,309,449,6 pers.,3 Slaapkamers,Van ma. 20 tot wo. 22 mrt.,105 m²,"België, Limburg, Dilsen-Stokkem",Terhills Resort by Center Parcs,"15-03-2023, 12:15:23",140,31
+VIP cottage,269,449,6 pers.,3 Slaapkamers,Van wo. 15 tot vr. 17 mrt.,98 m²,"België, Limburg, Dilsen-Stokkem",Terhills Resort by Center Parcs,"15-03-2023, 12:15:24",180,40
+VIP cottage,329,579,8 pers.,4 Slaapkamers,Van wo. 15 tot vr. 17 mrt.,125 m²,"België, Limburg, Dilsen-Stokkem",Terhills Resort by Center Parcs,"15-03-2023, 12:15:24",250,43
+VIP Lakeside cottage,389,619,8 pers.,4 Slaapkamers,Van di. 21 tot do. 23 mrt.,125 m²,"België, Limburg, Dilsen-Stokkem",Terhills Resort by Center Parcs,"15-03-2023, 12:15:25",230,37
+Exclusive cottage,406,449,6 pers.,3 Slaapkamers,Van ma. 15 tot wo. 17 mei.,98 m²,"België, Limburg, Dilsen-Stokkem",Terhills Resort by Center Parcs,"15-03-2023, 12:15:25",43,9
+Exclusive Lakeside cottage,409,709,8 pers.,4 Slaapkamers,Van wo. 15 tot vr. 17 mrt.,125 m²,"België, Limburg, Dilsen-Stokkem",Terhills Resort by Center Parcs,"15-03-2023, 12:15:26",300,42
+VIP Lakeside cottage,415,459,6 pers.,3 Slaapkamers,Van ma. 15 tot wo. 17 mei.,98 m²,"België, Limburg, Dilsen-Stokkem",Terhills Resort by Center Parcs,"15-03-2023, 12:15:26",44,9
+Exclusive Lakeside cottage,478,529,6 pers.,3 Slaapkamers,Van ma. 15 tot wo. 17 mei.,98 m²,"België, Limburg, Dilsen-Stokkem",Terhills Resort by Center Parcs,"15-03-2023, 12:15:27",51,9
+VIP cottage,529,809,12 pers.,6 Slaapkamers,Van wo. 22 tot vr. 24 mrt.,182 m²,"België, Limburg, Dilsen-Stokkem",Terhills Resort by Center Parcs,"15-03-2023, 12:15:27",280,34
+Exclusive Lakeside cottage,609,1029,12 pers.,6 Slaapkamers,Van wo. 15 tot vr. 17 mrt.,182 m²,"België, Limburg, Dilsen-Stokkem",Terhills Resort by Center Parcs,"15-03-2023, 12:15:28",420,40
+Exclusive cottage,759,969,12 pers.,6 Slaapkamers,Van wo. 15 tot vr. 17 mrt.,182 m²,"België, Limburg, Dilsen-Stokkem",Terhills Resort by Center Parcs,"15-03-2023, 12:15:29",210,21

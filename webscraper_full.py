@@ -61,8 +61,13 @@ def get_data_all(url) -> list:
             'surface': surface.text,
             'country': country.text,
             'vacation_parc': vacation_parc.text,
-            'timestamp': str_date_time
+            'timestamp': str_date_time,
+            'discount_in_euros': int(old_price.text.replace(',', '').replace('€', '')) - int(new_price.text.replace(',', '').replace('€', '')) if old_price else 0, # calculate discount and convert to int
+            'discount_in_percent': 0  # initialize discount_in_percent to 0
         }
+        if old_price is not None:
+            discount_percent = (int(old_price.text.replace(',', '').replace('€', '')) - int(new_price.text.replace(',', '').replace('€', ''))) / int(old_price.text.replace(',', '').replace('€', '')) * 100
+            cottage_item['discount_in_percent'] = int(discount_percent)  # assign discount percent to the 'discount_in_percent' key
         data.append(cottage_item)
 
     # Connect to PostgreSQL database
@@ -158,8 +163,12 @@ def get_data(url) -> list:
             'country': country.text,
             'vacation_parc': vacation_parc.text,
             'timestamp': str_date_time,
-            'discount': int(old_price.text.replace(',', '').replace('€', '')) - int(new_price.text.replace(',', '').replace('€', '')) if old_price else 0 # calculate discount and convert to int
+            'discount_in_euros': int(old_price.text.replace(',', '').replace('€', '')) - int(new_price.text.replace(',', '').replace('€', '')) if old_price else 0, # calculate discount and convert to int
+            'discount_in_percent': 0  # initialize discount_in_percent to 0
         }
+        if old_price is not None:
+            discount_percent = (int(old_price.text.replace(',', '').replace('€', '')) - int(new_price.text.replace(',', '').replace('€', ''))) / int(old_price.text.replace(',', '').replace('€', '')) * 100
+            cottage_item['discount_in_percent'] = int(discount_percent)  # assign discount percent to the 'discount_in_percent' key
         data.append(cottage_item)
 
         # Connect to PostgreSQL database
