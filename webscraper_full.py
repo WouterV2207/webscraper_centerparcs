@@ -149,15 +149,16 @@ def get_data(url) -> list:
         str_date_time = date_time.strftime("%d-%m-%Y, %H:%M:%S")
         cottage_item = {
             'title': title.text,
-            'new_price': new_price.text,
-            'old_price': old_price.text if old_price else '',
+            'new_price': int(new_price.text.replace(',', '').replace('€', '')), # remove currency symbol and convert to int
+            'old_price': int(old_price.text.replace(',', '').replace('€', '')) if old_price else 0, # remove currency symbol and convert to int
             'amount_of_persons': amount.text,
             'bedroom': bedroom.text,
             'duration': date.text,
             'surface': surface.text,
             'country': country.text,
             'vacation_parc': vacation_parc.text,
-            'timestamp': str_date_time
+            'timestamp': str_date_time,
+            'discount': int(old_price.text.replace(',', '').replace('€', '')) - int(new_price.text.replace(',', '').replace('€', '')) if old_price else 0 # calculate discount and convert to int
         }
         data.append(cottage_item)
 
