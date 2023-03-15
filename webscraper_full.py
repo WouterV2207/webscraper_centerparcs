@@ -13,7 +13,7 @@ from psycopg2 import sql
 def get_data_all(url) -> list:
     # Set Chrome options to run headlessly (without a GUI)
     browser_options = ChromeOptions()
-    browser_options.headless = False
+    browser_options.headless = True
     # Initialize Chrome driver and navigate to provided URL
     driver = Chrome(options=browser_options)
     driver.get(url)
@@ -25,7 +25,7 @@ def get_data_all(url) -> list:
                 EC.presence_of_element_located((By.CSS_SELECTOR, "a.js-searchPagination"))
             )
             element.click()
-            time.sleep(5)
+            time.sleep(8)
         except:
             break
     # Find information about each cottage on the page
@@ -34,8 +34,14 @@ def get_data_all(url) -> list:
     # For each cottage, extract relevant information and add to a dictionary
     for cottage in cottages:
         title = cottage.find_element(By.CSS_SELECTOR, "div.accCart-title")
-        new_price = cottage.find_element(By.CSS_SELECTOR, "span.accCart-price")
-        old_price = cottage.find_element(By.CSS_SELECTOR, "div.accCart-priceContainer")
+        try:
+            new_price = cottage.find_element(By.CSS_SELECTOR, "span.accCart-price")
+        except NoSuchElementException:
+            continue
+        try:
+            old_price = cottage.find_element(By.CSS_SELECTOR, "div.accCart-priceContainer del")
+        except NoSuchElementException:
+            old_price = None
         amount = cottage.find_element(By.CSS_SELECTOR, "li.accCart-specificationsItem")
         date = cottage.find_element(By.CSS_SELECTOR, "div.accCart-duration")
         bedroom = cottage.find_element(By.CSS_SELECTOR, "li.accCart-specificationsItem:nth-child(2)")
@@ -48,7 +54,7 @@ def get_data_all(url) -> list:
         cottage_item = {
             'title': title.text,
             'new_price': new_price.text,
-            'old_price': old_price.text,
+            'old_price': old_price.text if old_price else '',
             'amount_of_persons': amount.text,
             'bedroom': bedroom.text,
             'duration': date.text,
@@ -130,7 +136,10 @@ def get_data(url) -> list:
             new_price = cottage.find_element(By.CSS_SELECTOR, "span.accCart-price")
         except NoSuchElementException:
             continue
-        old_price = cottage.find_element(By.CSS_SELECTOR, "div.accCart-priceContainer")
+        try:
+            old_price = cottage.find_element(By.CSS_SELECTOR, "div.accCart-priceContainer del")
+        except NoSuchElementException:
+            old_price = None
         amount = cottage.find_element(By.CSS_SELECTOR, "li.accCart-specificationsItem")
         date = cottage.find_element(By.CSS_SELECTOR, "div.accCart-duration")
         bedroom = cottage.find_element(By.CSS_SELECTOR, "li.accCart-specificationsItem:nth-child(2)")
@@ -141,7 +150,7 @@ def get_data(url) -> list:
         cottage_item = {
             'title': title.text,
             'new_price': new_price.text,
-            'old_price': old_price.text,
+            'old_price': old_price.text if old_price else '',
             'amount_of_persons': amount.text,
             'bedroom': bedroom.text,
             'duration': date.text,
@@ -238,11 +247,8 @@ def main():
         program_cat = input("Do you want to scrape vacation or offers? ")
         #url to the page that needs to be scraped
         if program_cat == ("offers"):
-            offer = input("What type of offer (last-minutes, ecocheques)? ")
-            if offer == ("last-minutes"):
-                url = "https://www.centerparcs.be/be-vl/last-minutes_sck?market=be&language=vl&c=CPE_SINGLECLICK_V3&univers=cpe&type=SINGLECLICK_V3&item=280&currency=EUR&group=housing&sort=popularity_housing&asc=asc&page=1&nb=10&displayPrice=default&dateuser=0&facet[HOUSINGCATEGORY][]=COMFORT&facet[HOUSINGCATEGORY][]=PREMIUM&facet[HOUSINGCATEGORY][]=VIP&facet[HOUSINGCATEGORY][]=EXCLUSIVE&facet[HOUSINGCATEGORY][]=25&facet[HOUSINGCATEGORY][]=31&facet[HOUSINGCATEGORY][]=32&facet[HOUSINGCATEGORY][]=33&facet[HOUSINGCATEGORY][]=37&facet[HOUSINGCATEGORY][]=64&facet[HOUSINGCATEGORY][]=65&facet[PARTICIPANTSCP][adult]=2"
-            if offer == ("ecocheques"):
-                url = "https://www.centerparcs.be/be-vl/ecocheques_sck?market=be&language=vl&c=CPE_SINGLECLICK&univers=cpe&type=SINGLECLICK&item=1150&currency=EUR&group=housing&sort=popularity_housing&asc=asc&page=1&nb=10&displayPrice=default&dateuser=0&facet[COUNTRYSITE][]=l1_BE&facet[COUNTRYSITE][]=l1_NL&facet[COUNTRYSITE][]=l1_DE&facet[PARTICIPANTSCP][adult]"
+            offer = input("What type of offer (last-minutes, ecocheques, vroegboekvoordeel)? ")
+            url = f"https://www.centerparcs.be/be-vl/{offer}_sck?market=be&language=vl&c=CPE_SINGLECLICK_V3&univers=cpe&type=SINGLECLICK_V3&item=280&currency=EUR&group=housing&sort=popularity_housing&asc=asc&page=1&nb=10&displayPrice=default&dateuser=0&facet[HOUSINGCATEGORY][]=COMFORT&facet[HOUSINGCATEGORY][]=PREMIUM&facet[HOUSINGCATEGORY][]=VIP&facet[HOUSINGCATEGORY][]=EXCLUSIVE&facet[HOUSINGCATEGORY][]=25&facet[HOUSINGCATEGORY][]=31&facet[HOUSINGCATEGORY][]=32&facet[HOUSINGCATEGORY][]=33&facet[HOUSINGCATEGORY][]=37&facet[HOUSINGCATEGORY][]=64&facet[HOUSINGCATEGORY][]=65&facet[PARTICIPANTSCP][adult]=2"
         if program_cat == ("vacation"):
             vacation = input("What type of vacation (paasvakantie, hemelvaart-weekend-weg, pinksteren-weekend-weg, zomervakantie, herfstvakantie, 11-november, kerstvakantie, krokusvakantie)? ")
             url = f"https://www.centerparcs.be/be-vl/{vacation}_sck?market=be&language=vl&c=CPE_SINGLECLICK&univers=cpe&type=SINGLECLICK&item=695&currency=EUR&group=housing&sort=popularity_housing&asc=asc&page=1&nb=10&displayPrice=default&dateuser=0&facet[HOUSINGCATEGORY][]=COMFORT&facet[HOUSINGCATEGORY][]=PREMIUM&facet[HOUSINGCATEGORY][]=VIP&facet[HOUSINGCATEGORY][]=EXCLUSIVE&facet[HOUSINGCATEGORY][]=25&facet[HOUSINGCATEGORY][]=31&facet[HOUSINGCATEGORY][]=32&facet[HOUSINGCATEGORY][]=33&facet[HOUSINGCATEGORY][]=64&facet[HOUSINGCATEGORY][]=65&facet[DATE]=2023-03-31&facet[DATEEND]=2023-04-14&facet[PARTICIPANTSCP][adult]=2"
