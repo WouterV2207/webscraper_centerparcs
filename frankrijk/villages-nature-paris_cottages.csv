@@ -1,6 +1,3 @@
-title,price,amount_of_persons,bedroom,duration,surface,country,vacation_parc,timestamp
-Comfort cottage,€559,4 pers.,2 Slaapkamers,Van vr. 17 tot ma. 20 mrt.,54 m²,"Frankrijk, Parijs - Île De France, Marne La Vallée",Villages Nature® Paris,"13-03-2023, 09:20:18"
-Premium cottage,€589,4 pers.,2 Slaapkamers,Van vr. 17 tot ma. 20 mrt.,57 m²,"Frankrijk, Parijs - Île De France, Marne La Vallée",Villages Nature® Paris,"13-03-2023, 09:20:18"
-VIP cottage,€699,4 pers.,2 Slaapkamers,Van vr. 17 tot ma. 20 mrt.,67 m²,"Frankrijk, Parijs - Île De France, Marne La Vallée",Villages Nature® Paris,"13-03-2023, 09:20:19"
-Premium cottage,€729,6 pers.,3 Slaapkamers,Van vr. 17 tot ma. 20 mrt.,70 m²,"Frankrijk, Parijs - Île De France, Marne La Vallée",Villages Nature® Paris,"13-03-2023, 09:20:19"
-Comfort cottage,€719,6 pers.,3 Slaapkamers,Van vr. 17 tot ma. 20 mrt.,65 m²,"Frankrijk, Parijs - Île De France, Marne La Vallée",Villages Nature® Paris,"13-03-2023, 09:20:19"
+title,new_price,old_price,amount_of_persons,bedroom,duration,surface,country,vacation_parc,timestamp,discount_in_euros,discount_in_percent
+VIP cottage,1809,2109,10 pers.,5 Slaapkamers,Van ma. 20 tot vr. 24 mrt.,150 m²,"Frankrijk, Parijs - Île De France, Marne La Vallée",Villages Nature® Paris,"20-03-2023, 09:48:44",300,14
+VIP cottage,1939,2319,12 pers.,6 Slaapkamers,Van ma. 20 tot vr. 24 mrt.,164 m²,"Frankrijk, Parijs - Île De France, Marne La Vallée",Villages Nature® Paris,"20-03-2023, 09:48:44",380,16

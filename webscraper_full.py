@@ -257,7 +257,7 @@ def main():
         program_cat = input("Do you want to scrape vacation or offers? ")
         #url to the page that needs to be scraped
         if program_cat == ("offers"):
-            offer = input("What type of offer (last-minutes, ecocheques, vroegboekvoordeel)? ")
+            offer = input("What type of offer (last-minutes, ecocheques, vroegboekvoordeel, familie-55plus-korting, flexibel-boeken)? ")
             url = f"https://www.centerparcs.be/be-vl/{offer}_sck?market=be&language=vl&c=CPE_SINGLECLICK_V3&univers=cpe&type=SINGLECLICK_V3&item=280&currency=EUR&group=housing&sort=popularity_housing&asc=asc&page=1&nb=10&displayPrice=default&dateuser=0&facet[HOUSINGCATEGORY][]=COMFORT&facet[HOUSINGCATEGORY][]=PREMIUM&facet[HOUSINGCATEGORY][]=VIP&facet[HOUSINGCATEGORY][]=EXCLUSIVE&facet[HOUSINGCATEGORY][]=25&facet[HOUSINGCATEGORY][]=31&facet[HOUSINGCATEGORY][]=32&facet[HOUSINGCATEGORY][]=33&facet[HOUSINGCATEGORY][]=37&facet[HOUSINGCATEGORY][]=64&facet[HOUSINGCATEGORY][]=65&facet[PARTICIPANTSCP][adult]=2"
         if program_cat == ("vacation"):
             vacation = input("What type of vacation (paasvakantie, hemelvaart-weekend-weg, pinksteren-weekend-weg, zomervakantie, herfstvakantie, 11-november, kerstvakantie, krokusvakantie)? ")

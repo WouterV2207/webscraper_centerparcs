@@ -1,0 +1,6 @@
+title,new_price,old_price,amount_of_persons,bedroom,duration,surface,country,vacation_parc,timestamp,discount_in_euros,discount_in_percent
+Comfort cottage,339,409,6 pers.,3 Slaapkamers,Van di. 28 tot do. 30 mrt.,76 m²,"Frankrijk, Nieuw-Aquitanië, Beauziac",Les Landes de Gascogne,"15-03-2023, 16:16:34",70,17
+Comfort cottage,389,549,8 pers.,4 Slaapkamers,Van wo. 22 tot vr. 24 mrt.,90 m²,"Frankrijk, Nieuw-Aquitanië, Beauziac",Les Landes de Gascogne,"15-03-2023, 16:16:35",160,29
+VIP cottage,419,569,6 pers.,3 Slaapkamers,Van wo. 22 tot vr. 24 mrt.,93 m²,"Frankrijk, Nieuw-Aquitanië, Beauziac",Les Landes de Gascogne,"15-03-2023, 16:16:35",150,26
+VIP cottage,529,599,8 pers.,4 Slaapkamers,Van wo. 22 tot vr. 24 mrt.,117 m²,"Frankrijk, Nieuw-Aquitanië, Beauziac",Les Landes de Gascogne,"15-03-2023, 16:16:35",70,11
+VIP cottage,779,979,12 pers.,6 Slaapkamers,Van di. 21 tot do. 23 mrt.,189 m²,"Frankrijk, Nieuw-Aquitanië, Beauziac",Les Landes de Gascogne,"15-03-2023, 16:16:36",200,20
