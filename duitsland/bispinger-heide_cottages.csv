@@ -1,9 +1,9 @@
-title,price,amount_of_persons,bedroom,duration,surface,country,vacation_parc,timestamp
-Premium cottage Vernieuwd,€589,4 pers.,2 Slaapkamers,Van vr. 17 tot ma. 20 mrt.,55 m²,"Duitsland, Lüneburger Heide, Soltau",Bispinger Heide,"13-03-2023, 09:22:22"
-Premium Eden cottage Vernieuwd,€599,4 pers.,2 Slaapkamers,Van vr. 17 tot ma. 20 mrt.,72 m²,"Duitsland, Lüneburger Heide, Soltau",Bispinger Heide,"13-03-2023, 09:22:23"
-VIP cottage Vernieuwd,€499,2 pers.,1 Slaapkamer,Van vr. 17 tot ma. 20 mrt.,55 m²,"Duitsland, Lüneburger Heide, Soltau",Bispinger Heide,"13-03-2023, 09:22:23"
-Comfort cottage Vernieuwd,€569,4 pers.,2 Slaapkamers,Van vr. 17 tot ma. 20 mrt.,55 m²,"Duitsland, Lüneburger Heide, Soltau",Bispinger Heide,"13-03-2023, 09:22:23"
-VIP cottage Vernieuwd,€649,4 pers.,2 Slaapkamers,Van vr. 17 tot ma. 20 mrt.,63 m²,"Duitsland, Lüneburger Heide, Soltau",Bispinger Heide,"13-03-2023, 09:22:23"
-Premium cottage Vernieuwd,€619,6 pers.,3 Slaapkamers,Van vr. 17 tot ma. 20 mrt.,63 m²,"Duitsland, Lüneburger Heide, Soltau",Bispinger Heide,"13-03-2023, 09:22:24"
-Comfort cottage Vernieuwd,€689,6 pers.,3 Slaapkamers,Van vr. 17 tot ma. 20 mrt.,63 m²,"Duitsland, Lüneburger Heide, Soltau",Bispinger Heide,"13-03-2023, 09:22:24"
-VIP cottage Vernieuwd,€969,6 pers.,3 Slaapkamers,Van vr. 17 tot ma. 20 mrt.,87 m²,"Duitsland, Lüneburger Heide, Soltau",Bispinger Heide,"13-03-2023, 09:22:24"
+title,new_price,old_price,amount_of_persons,bedroom,duration,surface,country,vacation_parc,timestamp,discount_in_euros,discount_in_percent
+Premium cottage Vernieuwd,349,539,4 pers.,2 Slaapkamers,Van ma. 5 tot do. 8 jun.,55 m²,"Duitsland, Lüneburger Heide, Soltau",Bispinger Heide,"15-03-2023, 15:07:12",190,35
+Premium Eden cottage Vernieuwd,359,549,4 pers.,2 Slaapkamers,Van ma. 5 tot do. 8 jun.,72 m²,"Duitsland, Lüneburger Heide, Soltau",Bispinger Heide,"15-03-2023, 15:07:12",190,34
+Premium cottage Rolstoelvriendelijk Vernieuwd,640,709,4 pers.,2 Slaapkamers,Van do. 8 tot ma. 12 jun.,60 m²,"Duitsland, Lüneburger Heide, Soltau",Bispinger Heide,"15-03-2023, 15:07:13",69,9
+Premium cottage Vernieuwd,329,449,6 pers.,3 Slaapkamers,Van ma. 15 tot wo. 17 mei.,63 m²,"Duitsland, Lüneburger Heide, Soltau",Bispinger Heide,"15-03-2023, 15:07:13",120,26
+Comfort cottage Vernieuwd,339,519,6 pers.,3 Slaapkamers,Van ma. 5 tot do. 8 jun.,63 m²,"Duitsland, Lüneburger Heide, Soltau",Bispinger Heide,"15-03-2023, 15:07:14",180,34
+Comfort cottage Vernieuwd,389,599,4 pers.,2 Slaapkamers,Van do. 8 tot ma. 12 jun.,55 m²,"Duitsland, Lüneburger Heide, Soltau",Bispinger Heide,"15-03-2023, 15:07:14",210,35
+Premium Eden cottage Vernieuwd,847,939,6 pers.,3 Slaapkamers,Van ma. 22 tot vr. 26 mei.,94 m²,"Duitsland, Lüneburger Heide, Soltau",Bispinger Heide,"15-03-2023, 15:07:15",92,9
+Premium cottage Vernieuwd,386,529,8 pers.,4 Slaapkamers,Van ma. 15 tot wo. 17 mei.,87 m²,"Duitsland, Lüneburger Heide, Soltau",Bispinger Heide,"15-03-2023, 15:07:16",143,27
