@@ -25,7 +25,7 @@ def get_data_all(url, program_cat) -> list:
                 EC.presence_of_element_located((By.CSS_SELECTOR, "a.js-searchPagination"))
             )
             element.click()
-            time.sleep(8)
+            time.sleep(3)
         except:
             break
     # Find information about each cottage on the page
@@ -207,8 +207,8 @@ def get_data(url) -> list:
 
 def main():
     #user inputs that need to be filled in for the url
-    program = input("Do you want to scrape all cottages, yes or no: ")
-    if program == ("no"):
+    program = input("Where do you want to scrape cottages (resort, country, offers/vacations): ")
+    if program == ("resort"):
         program_person = input("Do you want to fill in a specific amount of persons, yes or no (max. 12): ")
         if program_person == ("yes"):
             am_adults = input("How many adults? ")
@@ -253,7 +253,7 @@ def main():
             writer.writerows(data)
     # Print a message indicating the number of scraped cottages and the location of the CSV file
         print(f"{len(data)} cottages scraped and saved to {vacation_park}_cottages.csv in the {country} folder")
-    if program == ("yes"):
+    if program == ("offers/vacations"):
         program_cat = input("Do you want to scrape vacations or offers? ")
         #url to the page that needs to be scraped
         if program_cat == ("offers"):
@@ -264,6 +264,11 @@ def main():
             url = f"https://www.centerparcs.be/be-vl/{vacation}_sck?market=be&language=vl&c=CPE_SINGLECLICK&univers=cpe&type=SINGLECLICK&item=695&currency=EUR&group=housing&sort=popularity_housing&asc=asc&page=1&nb=10&displayPrice=default&dateuser=0&facet[HOUSINGCATEGORY][]=COMFORT&facet[HOUSINGCATEGORY][]=PREMIUM&facet[HOUSINGCATEGORY][]=VIP&facet[HOUSINGCATEGORY][]=EXCLUSIVE&facet[HOUSINGCATEGORY][]=25&facet[HOUSINGCATEGORY][]=31&facet[HOUSINGCATEGORY][]=32&facet[HOUSINGCATEGORY][]=33&facet[HOUSINGCATEGORY][]=64&facet[HOUSINGCATEGORY][]=65&facet[DATE]=2023-03-31&facet[DATEEND]=2023-04-14&facet[PARTICIPANTSCP][adult]=2"
         data = get_data_all(url, program_cat)
         print(f"{len(data)} cottages scraped and saved to database")
+    if program == ("country"):
+        program_cat = "cottages"
+        scrape_country = input("Which country? (BE, NL, DE, FR) ")
+        url = f"https://www.centerparcs.be/be-vl/vakantieparken-belgie_sck?market=be&language=vl&c=CPE_SINGLECLICK&univers=cpe&type=SINGLECLICK&item=536&currency=EUR&group=housing&sort=popularity_housing&asc=asc&page=1&nb=10&displayPrice=default&dateuser=0&facet[COUNTRYSITE][]=l1_{scrape_country}&facet[PARTICIPANTSCP][adult]=2"
+    data = get_data_all(url, program_cat)  
    
 
 # If this script is being run as the main module, call the main function
