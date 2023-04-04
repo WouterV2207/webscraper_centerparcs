@@ -1,0 +1,71 @@
+title,new_price,old_price,amount_of_persons,bedroom,duration,surface,country,vacation_parc,timestamp,discount_in_euros,discount_in_percent
+Comfort cottage,€159,€239,4 pers.,2 Slaapkamers,Van ma. 15 tot wo. 17 mei.,59 m²,"België, Ardennen, Vielsalm",Les Ardennes,"04-04-2023, 12:20:25",80,33
+Comfort cottage,€129,€209,4 pers.,2 Slaapkamers,Van ma. 15 tot wo. 17 mei.,50 m²,"België, Ardennen, Vielsalm",Les Ardennes,"04-04-2023, 12:20:25",80,38
+Comfort cottage,€159,€239,6 pers.,3 Slaapkamers,Van ma. 15 tot wo. 17 mei.,75 m²,"België, Ardennen, Vielsalm",Les Ardennes,"04-04-2023, 12:20:25",80,33
+Comfort cottage,€189,€269,6 pers.,3 Slaapkamers,Van ma. 15 tot wo. 17 mei.,75 m²,"België, Ardennen, Vielsalm",Les Ardennes,"04-04-2023, 12:20:25",80,29
+Premium cottage,€199,€289,4 pers.,2 Slaapkamers,Van ma. 15 tot wo. 17 mei.,59 m²,"België, Ardennen, Vielsalm",Les Ardennes,"04-04-2023, 12:20:26",90,31
+Premium cottage,€219,€309,6 pers.,3 Slaapkamers,Van ma. 15 tot wo. 17 mei.,75 m²,"België, Ardennen, Vielsalm",Les Ardennes,"04-04-2023, 12:20:26",90,29
+Premium cottage Vernieuwd,€349,,5 pers.,3 Slaapkamers,Van ma. 15 tot wo. 17 mei.,64m²,"België, Limburg, Peer",Erperheide,"04-04-2023, 12:20:26",0,0
+Premium cottage Vernieuwd,€295,€409,4 pers.,2 Slaapkamers,Van wo. 21 tot vr. 23 jun.,64m²,"België, Limburg, Peer",Erperheide,"04-04-2023, 12:20:26",114,27
+Premium cottage Rolstoelvriendelijk Vernieuwd,€329,,4 pers.,2 Slaapkamers,Van ma. 15 tot wo. 17 mei.,73m²,"België, Limburg, Peer",Erperheide,"04-04-2023, 12:20:27",0,0
+Comfort cottage Vernieuwd,€273,€379,5 pers.,3 Slaapkamers,Van di. 13 tot do. 15 jun.,64m²,"België, Limburg, Peer",Erperheide,"04-04-2023, 12:20:27",106,27
+Comfort cottage Vernieuwd,€266,€369,4 pers.,2 Slaapkamers,Van wo. 14 tot vr. 16 jun.,62m²,"België, Limburg, Peer",Erperheide,"04-04-2023, 12:20:27",103,27
+Premium cottage,€209,€289,4 pers.,2 Slaapkamers,Van ma. 15 tot wo. 17 mei.,59 m²,"België, West-Vlaanderen, De Haan",Park De Haan,"04-04-2023, 12:20:27",80,27
+Premium cottage,€229,€309,5 pers.,3 Slaapkamers,Van ma. 15 tot wo. 17 mei.,66 m²,"België, West-Vlaanderen, De Haan",Park De Haan,"04-04-2023, 12:20:28",80,25
+Comfort cottage,€169,€229,4 pers.,2 Slaapkamers,Van ma. 15 tot wo. 17 mei.,59 m²,"België, West-Vlaanderen, De Haan",Park De Haan,"04-04-2023, 12:20:28",60,26
+Comfort cottage,€179,€259,5 pers.,3 Slaapkamers,Van ma. 15 tot wo. 17 mei.,66 m²,"België, West-Vlaanderen, De Haan",Park De Haan,"04-04-2023, 12:20:28",80,30
+Rolstoelvriendelijk VIP cottage,€522,€579,4 pers.,2 Slaapkamers,Van wo. 28 tot vr. 30 jun.,84 m²,"België, Limburg, Dilsen-Stokkem",Terhills Resort,"04-04-2023, 12:20:28",57,9
+VIP cottage,€522,€579,4 pers.,2 Slaapkamers,Van ma. 26 tot wo. 28 jun.,77 m²,"België, Limburg, Dilsen-Stokkem",Terhills Resort,"04-04-2023, 12:20:29",57,9
+Rolstoelvriendelijk VIP cottage,€579,€1469,6 pers.,3 Slaapkamers,Van di. 18 tot vr. 21 apr.,105 m²,"België, Limburg, Dilsen-Stokkem",Terhills Resort,"04-04-2023, 12:20:29",890,60
+VIP cottage,€579,€1469,6 pers.,3 Slaapkamers,Van di. 18 tot vr. 21 apr.,98 m²,"België, Limburg, Dilsen-Stokkem",Terhills Resort,"04-04-2023, 12:20:29",890,60
+Premium cottage Vernieuwd,€359,€439,6 pers.,3 Slaapkamers,Van ma. 22 tot wo. 24 mei.,75 m²,"België, Limburg, Lommel",De Vossemeren,"04-04-2023, 12:20:29",80,18
+Comfort cottage Vernieuwd,€269,€339,4 pers.,2 Slaapkamers,Van di. 23 tot do. 25 mei.,66m²,"België, Limburg, Lommel",De Vossemeren,"04-04-2023, 12:20:30",70,20
+Comfort cottage Vernieuwd,€289,€509,6 pers.,3 Slaapkamers,Van wo. 24 tot vr. 26 mei.,75 m²,"België, Limburg, Lommel",De Vossemeren,"04-04-2023, 12:20:30",220,43
+Premium cottage,€149,€199,2 pers.,1 Slaapkamer,Van ma. 15 tot wo. 17 mei.,40 m²,"België, Ardennen, Vielsalm",Les Ardennes,"04-04-2023, 12:20:30",50,25
+Comfort cottage,€209,€289,8 pers.,4 Slaapkamers,Van ma. 15 tot wo. 17 mei.,85 m²,"België, Ardennen, Vielsalm",Les Ardennes,"04-04-2023, 12:20:30",80,27
+Comfort cottage,€239,€319,8 pers.,4 Slaapkamers,Van ma. 15 tot wo. 17 mei.,85 m²,"België, Ardennen, Vielsalm",Les Ardennes,"04-04-2023, 12:20:31",80,25
+Premium cottage,€269,€359,8 pers.,4 Slaapkamers,Van ma. 15 tot wo. 17 mei.,85 m²,"België, Ardennen, Vielsalm",Les Ardennes,"04-04-2023, 12:20:31",90,25
+VIP cottage,€269,€359,4 pers.,2 Slaapkamers,Van ma. 15 tot wo. 17 mei.,75 m²,"België, Ardennen, Vielsalm",Les Ardennes,"04-04-2023, 12:20:31",90,25
+VIP cottage,€279,€309,2 pers.,1 Slaapkamer,Van wo. 28 tot vr. 30 jun.,59 m²,"België, Ardennen, Vielsalm",Les Ardennes,"04-04-2023, 12:20:32",30,9
+VIP cottage,€309,€419,6 pers.,3 Slaapkamers,Van ma. 15 tot wo. 17 mei.,85 m²,"België, Ardennen, Vielsalm",Les Ardennes,"04-04-2023, 12:20:32",110,26
+VIP cottage,€589,€989,8 pers.,4 Slaapkamers,Van di. 30 mei. tot do. 1 jun.,93 m²,"België, Ardennen, Vielsalm",Les Ardennes,"04-04-2023, 12:20:32",400,40
+Premium cottage,€828,€919,12 pers.,6 Slaapkamers,Van wo. 21 tot vr. 23 jun.,131 m²,"België, Ardennen, Vielsalm",Les Ardennes,"04-04-2023, 12:20:32",91,9
+Premium cottage,€981,€1089,14 pers.,7 Slaapkamers,Van wo. 21 tot vr. 23 jun.,171 m²,"België, Ardennen, Vielsalm",Les Ardennes,"04-04-2023, 12:20:33",108,9
+Premium cottage,€1159,€1199,18 pers.,9 Slaapkamers,Van wo. 31 mei. tot vr. 2 jun.,211 m²,"België, Ardennen, Vielsalm",Les Ardennes,"04-04-2023, 12:20:33",40,3
+VIP cottage Vernieuwd,€369,€409,2 pers.,1 Slaapkamer,Van ma. 12 tot wo. 14 jun.,64m²,"België, Limburg, Peer",Erperheide,"04-04-2023, 12:20:33",40,9
+VIP cottage Vernieuwd,429€,,4 pers.,2 Slaapkamers,Van ma. 15 tot wo. 17 mei.,66m²,"België, Limburg, Peer",Erperheide,"04-04-2023, 12:20:34",0,0
+Dieren in het bos cottage,429€,,4 pers.,2 Slaapkamers,Van ma. 15 tot wo. 17 mei.,64m²,"België, Limburg, Peer",Erperheide,"04-04-2023, 12:20:34",0,0
+Pony cottage Vernieuwd,449€,,5 pers.,3 Slaapkamers,Van ma. 15 tot wo. 17 mei.,64m²,"België, Limburg, Peer",Erperheide,"04-04-2023, 12:20:34",0,0
+VIP cottage Vernieuwd,559€,,6 pers.,3 Slaapkamers,Van ma. 15 tot wo. 17 mei.,103m²,"België, Limburg, Peer",Erperheide,"04-04-2023, 12:20:34",0,0
+Premium cottage Vernieuwd,€599,€609,8 pers.,4 Slaapkamers,Van wo. 24 tot vr. 26 mei.,103m²,"België, Limburg, Peer",Erperheide,"04-04-2023, 12:20:34",10,1
+Comfort cottage,€249,€329,8 pers.,4 Slaapkamers,Van ma. 15 tot wo. 17 mei.,85 m²,"België, West-Vlaanderen, De Haan",Park De Haan,"04-04-2023, 12:20:35",80,24
+VIP cottage,€279,€379,4 pers.,2 Slaapkamers,Van ma. 15 tot wo. 17 mei.,66 m²,"België, West-Vlaanderen, De Haan",Park De Haan,"04-04-2023, 12:20:35",100,26
+Premium cottage,€289,€369,8 pers.,4 Slaapkamers,Van ma. 15 tot wo. 17 mei.,85 m²,"België, West-Vlaanderen, De Haan",Park De Haan,"04-04-2023, 12:20:35",80,21
+VIP Lakeside cottage,€319,€419,6 pers.,3 Slaapkamers,Van ma. 15 tot wo. 17 mei.,100 m²,"België, West-Vlaanderen, De Haan",Park De Haan,"04-04-2023, 12:20:36",100,23
+VIP cottage,€349,€459,6 pers.,3 Slaapkamers,Van ma. 15 tot wo. 17 mei.,85 m²,"België, West-Vlaanderen, De Haan",Park De Haan,"04-04-2023, 12:20:36",110,23
+VIP cottage,€409,€519,2 pers.,1 Slaapkamer,Van vr. 14 tot zo. 16 apr.,59 m²,"België, West-Vlaanderen, De Haan",Park De Haan,"04-04-2023, 12:20:36",110,21
+Premium cottage,€469,€559,12 pers.,6 Slaapkamers,Van ma. 15 tot wo. 17 mei.,132 m²,"België, West-Vlaanderen, De Haan",Park De Haan,"04-04-2023, 12:20:37",90,16
+VIP cottage,€339,€399,2 pers.,1 Slaapkamer,Van ma. 15 tot wo. 17 mei.,58 m²,"België, Limburg, Dilsen-Stokkem",Terhills Resort,"04-04-2023, 12:20:37",60,15
+VIP cottage,€489,€529,8 pers.,4 Slaapkamers,Van ma. 15 tot wo. 17 mei.,125 m²,"België, Limburg, Dilsen-Stokkem",Terhills Resort,"04-04-2023, 12:20:37",40,7
+Exclusive Lakeside cottage,489€,,4 pers.,2 Slaapkamers,Van ma. 15 tot wo. 17 mei.,77 m²,"België, Limburg, Dilsen-Stokkem",Terhills Resort,"04-04-2023, 12:20:37",0,0
+VIP Lakeside cottage,€579,€619,8 pers.,4 Slaapkamers,Van ma. 15 tot wo. 17 mei.,125 m²,"België, Limburg, Dilsen-Stokkem",Terhills Resort,"04-04-2023, 12:20:38",40,6
+Exclusive cottage,€609,€939,4 pers.,2 Slaapkamers,Van vr. 5 tot zo. 7 mei.,77 m²,"België, Limburg, Dilsen-Stokkem",Terhills Resort,"04-04-2023, 12:20:38",330,35
+Exclusive Lakeside cottage,€669,€709,8 pers.,4 Slaapkamers,Van ma. 15 tot wo. 17 mei.,125 m²,"België, Limburg, Dilsen-Stokkem",Terhills Resort,"04-04-2023, 12:20:38",40,5
+Exclusive cottage,€749,€979,6 pers.,3 Slaapkamers,Van vr. 12 tot zo. 14 mei.,98 m²,"België, Limburg, Dilsen-Stokkem",Terhills Resort,"04-04-2023, 12:20:39",230,23
+Exclusive cottage,749€,,2 pers.,1 Slaapkamer,Van vr. 21 tot ma. 24 apr.,58 m²,"België, Limburg, Dilsen-Stokkem",Terhills Resort,"04-04-2023, 12:20:39",0,0
+Exclusive Lakeside cottage,€789,€1169,6 pers.,3 Slaapkamers,Van vr. 14 tot ma. 17 apr.,98 m²,"België, Limburg, Dilsen-Stokkem",Terhills Resort,"04-04-2023, 12:20:39",380,32
+VIP cottage,€799,€839,12 pers.,6 Slaapkamers,Van ma. 15 tot wo. 17 mei.,182 m²,"België, Limburg, Dilsen-Stokkem",Terhills Resort,"04-04-2023, 12:20:40",40,4
+VIP Lakeside cottage,€909,€1269,6 pers.,3 Slaapkamers,Van ma. 22 tot vr. 26 mei.,98 m²,"België, Limburg, Dilsen-Stokkem",Terhills Resort,"04-04-2023, 12:20:40",360,28
+Exclusive Lakeside cottage,€1479,€3489,12 pers.,6 Slaapkamers,Van ma. 17 tot do. 20 apr.,182 m²,"België, Limburg, Dilsen-Stokkem",Terhills Resort,"04-04-2023, 12:20:40",2010,57
+Exclusive cottage,€1659,€2439,12 pers.,6 Slaapkamers,Van ma. 8 tot vr. 12 mei.,182 m²,"België, Limburg, Dilsen-Stokkem",Terhills Resort,"04-04-2023, 12:20:41",780,31
+VIP Lakeside cottage,€344,€429,4 pers.,2 Slaapkamers,Van wo. 20 tot vr. 22 dec.,77 m²,"België, Limburg, Dilsen-Stokkem",Terhills Resort,"04-04-2023, 12:20:41",85,19
+VIP cottage Vernieuwd,€319,€539,2 pers.,1 Slaapkamer,Van ma. 15 tot wo. 17 mei.,66 m²,"België, Limburg, Lommel",De Vossemeren,"04-04-2023, 12:20:41",220,40
+Premium cottage Vernieuwd,€329,€499,4 pers.,2 Slaapkamers,Van wo. 24 tot vr. 26 mei.,66 m²,"België, Limburg, Lommel",De Vossemeren,"04-04-2023, 12:20:41",170,34
+Premium cottage Vernieuwd,€374,€519,5 pers.,3 Slaapkamers,Van ma. 19 tot wo. 21 jun.,75 m²,"België, Limburg, Lommel",De Vossemeren,"04-04-2023, 12:20:42",145,27
+Rolstoelvriendelijk Premium cottage Vernieuwd,€423,€469,4 pers.,2 Slaapkamers,Van di. 20 tot do. 22 jun.,75 m²,"België, Limburg, Lommel",De Vossemeren,"04-04-2023, 12:20:42",46,9
+VIP cottage Vernieuwd,€439,€739,4 pers.,2 Slaapkamers,Van ma. 15 tot wo. 17 mei.,75m²,"België, Limburg, Lommel",De Vossemeren,"04-04-2023, 12:20:42",300,40
+Premium cottage Vernieuwd,€439,€479,8 pers.,4 Slaapkamers,Van wo. 24 tot vr. 26 mei.,103 m²,"België, Limburg, Lommel",De Vossemeren,"04-04-2023, 12:20:43",40,8
+Wonders of Nature cottage,€449,€719,4 pers.,2 Slaapkamers,Van ma. 15 tot wo. 17 mei.,75m²,"België, Limburg, Lommel",De Vossemeren,"04-04-2023, 12:20:43",270,37
+VIP cottage Vernieuwd,€489,€629,6 pers.,3 Slaapkamers,Van di. 23 tot do. 25 mei.,96 m²,"België, Limburg, Lommel",De Vossemeren,"04-04-2023, 12:20:43",140,22
+Wonders of Nature cottage,€499,€799,6 pers.,3 Slaapkamers,Van ma. 15 tot wo. 17 mei.,75 m²,"België, Limburg, Lommel",De Vossemeren,"04-04-2023, 12:20:44",300,37
+VIP cottage Vernieuwd,€809,€1349,10 pers.,5 Slaapkamers,Van ma. 15 tot wo. 17 mei.,171 m²,"België, Limburg, Lommel",De Vossemeren,"04-04-2023, 12:20:44",540,40
