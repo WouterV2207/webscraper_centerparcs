@@ -13,7 +13,7 @@ from psycopg2 import sql
 def get_data_all(url, program_cat) -> list:
     # Set Chrome options to run headlessly (without a GUI)
     browser_options = ChromeOptions()
-    browser_options.headless = False
+    browser_options.headless = True
     # Initialize Chrome driver and navigate to provided URL
     driver = Chrome(options=browser_options)
     driver.get(url)
@@ -109,7 +109,7 @@ def get_data_all(url, program_cat) -> list:
 def get_data(url) -> list:
     # Set Chrome options to run headlessly (without a GUI)
     browser_options = ChromeOptions()
-    browser_options.headless = False
+    browser_options.headless = True
     # Initialize Chrome driver and navigate to provided URL
     driver = Chrome(options=browser_options)
     driver.get(url)
@@ -265,10 +265,16 @@ def main():
                 vacation = input("What type of vacation (paasvakantie, hemelvaart-weekend-weg, pinksteren-weekend-weg, zomervakantie, herfstvakantie, 11-november, kerstvakantie, krokusvakantie)? ")
                 url = f"https://www.centerparcs.be/be-vl/{vacation}_sck?market=be&language=vl&c=CPE_SINGLECLICK&univers=cpe&type=SINGLECLICK&item=695&currency=EUR&group=housing&sort=popularity_housing&asc=asc&page=1&nb=10&displayPrice=default&dateuser=0&facet[HOUSINGCATEGORY][]=COMFORT&facet[HOUSINGCATEGORY][]=PREMIUM&facet[HOUSINGCATEGORY][]=VIP&facet[HOUSINGCATEGORY][]=EXCLUSIVE&facet[HOUSINGCATEGORY][]=25&facet[HOUSINGCATEGORY][]=31&facet[HOUSINGCATEGORY][]=32&facet[HOUSINGCATEGORY][]=33&facet[HOUSINGCATEGORY][]=64&facet[HOUSINGCATEGORY][]=65&facet[DATE]=2023-03-31&facet[DATEEND]=2023-04-14&facet[PARTICIPANTSCP][adult]=2"
             data = get_data_all(url, program_cat)
-            #with open(f"vroegboekvoordeel.csv", mode="w", newline="") as file:
-             #   writer = csv.DictWriter(file, fieldnames=data[0].keys())
-              #  writer.writeheader()
-               # writer.writerows(data)
+            if program_cat == ("offers"):
+                with open(f"offers/{offer}.csv", mode="w", newline="") as file:
+                    writer = csv.DictWriter(file, fieldnames=data[0].keys())
+                    writer.writeheader()
+                    writer.writerows(data)
+            else:
+                with open(f"vacations/{vacation}.csv", mode="w", newline="") as file:
+                    writer = csv.DictWriter(file, fieldnames=data[0].keys())
+                    writer.writeheader()
+                    writer.writerows(data)
             print(f"{len(data)} cottages scraped and saved to database")
         if program == ("country"):
             program_cat = "cottages"
@@ -303,7 +309,11 @@ def main():
                 for age in children_ages:
                     url += f"&facet[PARTICIPANTSCP][ages][]={age}"
         # url = f"https://www.centerparcs.be/be-vl/vakantieparken-belgie_sck?market=be&language=vl&c=CPE_SINGLECLICK&univers=cpe&type=SINGLECLICK&item=536&currency=EUR&group=housing&sort=popularity_housing&asc=asc&page=1&nb=10&displayPrice=default&dateuser=0&facet[COUNTRYSITE][]=l1_{scrape_country}&facet[PARTICIPANTSCP][adult]=2"
-            data = get_data_all(url, program_cat)  
+            data = get_data_all(url, program_cat)
+            with open(f"countries/{scrape_country}.csv", mode="w", newline="") as file:
+                    writer = csv.DictWriter(file, fieldnames=data[0].keys())
+                    writer.writeheader()
+                    writer.writerows(data)  
             print(f"{len(data)} cottages scraped and saved to database")
 
 # If this script is being run as the main module, call the main function
