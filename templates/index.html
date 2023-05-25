@@ -1,0 +1,59 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Scraping Form</title>
+</head>
+<body>
+    <h1>Data Scraping Form</h1>
+    <form method="POST" action="/">
+        <label for="program">Program:</label>
+        <select name="program" id="program">
+            <option value="resort">Resort</option>
+            <option value="resort">Country</option>
+            <option value="resort">Offers/Vacations</option>
+        </select>
+        <br><br>
+        <label for="program_date">Program Date:</label>
+        <select name="program_date" id="program_date">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select>
+        <br><br>
+        <label for="country">Country:</label>
+        <input type="text" name="country" id="country">
+        <br><br>
+        <label for="vacation_park_code">Vacation Park Code:</label>
+        <input type="text" name="vacation_park_code" id="vacation_park_code">
+        <br><br>
+        <label for="vacation_park">Vacation Park:</label>
+        <input type="text" name="vacation_park" id="vacation_park">
+        <br><br>
+        <label for="arr_date">Arrival Date:</label>
+        <input type="text" name="arr_date" id="arr_date">
+        <br><br>
+        <label for="ret_date">Return Date:</label>
+        <input type="text" name="ret_date" id="ret_date">
+        <br><br>
+        <label for="am_adults">Adults:</label>
+        <input type="text" name="am_adults" id="am_adults">
+        <br><br>
+        <label for="am_seniors">Seniors:</label>
+        <input type="text" name="am_seniors" id="am_seniors">
+        <br><br>
+        <label for="am_pets">Pets:</label>
+        <input type="text" name="am_pets" id="am_pets">
+        <br><br>
+        <label for="am_children">Children:</label>
+        <input type="text" name="am_children" id="am_children">
+        <br><br>
+        <label for="children_ages">Children Ages:</label>
+        <input type="text" name="children_ages" id="children_ages">
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+    {% if message %}
+        <p>{{ message }}</p>
+    {% endif %}
+</body>
+</html>

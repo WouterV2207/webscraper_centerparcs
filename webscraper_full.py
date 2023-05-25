@@ -13,7 +13,7 @@ from psycopg2 import sql
 def get_data_all(url, program_cat) -> list:
     # Set Chrome options to run headlessly (without a GUI)
     browser_options = ChromeOptions()
-    browser_options.headless = True
+    browser_options.headless = False
     # Initialize Chrome driver and navigate to provided URL
     driver = Chrome(options=browser_options)
     driver.get(url)
@@ -109,7 +109,7 @@ def get_data_all(url, program_cat) -> list:
 def get_data(url) -> list:
     # Set Chrome options to run headlessly (without a GUI)
     browser_options = ChromeOptions()
-    browser_options.headless = True
+    browser_options.headless = False
     # Initialize Chrome driver and navigate to provided URL
     driver = Chrome(options=browser_options)
     driver.get(url)
@@ -209,7 +209,7 @@ def main():
     #user inputs that need to be filled in for the url
     program_repeater = int(input("How many times do you want to run the program? "))
     for i in range(int(program_repeater)):
-        program = input("Where do you want to scrape cottages (resort, country, offers/vacations): ")
+        program = input("Where do you want to scrape cottages (resort, country, offer/vacation): ")
         if program == ("resort"):
             program_person = input("Do you want to fill in a specific amount of persons, yes or no (max. 12): ")
             if program_person == ("yes"):
@@ -255,23 +255,23 @@ def main():
                 writer.writerows(data)
         # Print a message indicating the number of scraped cottages and the location of the CSV file
             print(f"{len(data)} cottages scraped and saved to {vacation_park}_cottages.csv in the {country} folder")
-        if program == ("offers/vacations"):
-            program_cat = input("Do you want to scrape vacations or offers? ")
+        if program == ("offer/vacation"):
+            program_cat = input("Do you want to scrape vacation or offer? ")
             #url to the page that needs to be scraped
-            if program_cat == ("offers"):
+            if program_cat == ("offer"):
                 offer = input("What type of offer (last-minutes, ecocheques, vroegboekvoordeel, familie-55plus-korting, flexibel-boeken, weekendje-weg-voorjaar)? ")
                 url = f"https://www.centerparcs.be/be-vl/{offer}_sck?market=be&language=vl&c=CPE_SINGLECLICK_V3&univers=cpe&type=SINGLECLICK_V3&item=280&currency=EUR&group=housing&sort=popularity_housing&asc=asc&page=1&nb=10&displayPrice=default&dateuser=0&facet[HOUSINGCATEGORY][]=COMFORT&facet[HOUSINGCATEGORY][]=PREMIUM&facet[HOUSINGCATEGORY][]=VIP&facet[HOUSINGCATEGORY][]=EXCLUSIVE&facet[HOUSINGCATEGORY][]=25&facet[HOUSINGCATEGORY][]=31&facet[HOUSINGCATEGORY][]=32&facet[HOUSINGCATEGORY][]=33&facet[HOUSINGCATEGORY][]=37&facet[HOUSINGCATEGORY][]=64&facet[HOUSINGCATEGORY][]=65&facet[PARTICIPANTSCP][adult]=2"
-            if program_cat == ("vacations"):
+            if program_cat == ("vacation"):
                 vacation = input("What type of vacation (paasvakantie, hemelvaart-weekend-weg, pinksteren-weekend-weg, zomervakantie, herfstvakantie, 11-november, kerstvakantie, krokusvakantie)? ")
                 url = f"https://www.centerparcs.be/be-vl/{vacation}_sck?market=be&language=vl&c=CPE_SINGLECLICK&univers=cpe&type=SINGLECLICK&item=695&currency=EUR&group=housing&sort=popularity_housing&asc=asc&page=1&nb=10&displayPrice=default&dateuser=0&facet[HOUSINGCATEGORY][]=COMFORT&facet[HOUSINGCATEGORY][]=PREMIUM&facet[HOUSINGCATEGORY][]=VIP&facet[HOUSINGCATEGORY][]=EXCLUSIVE&facet[HOUSINGCATEGORY][]=25&facet[HOUSINGCATEGORY][]=31&facet[HOUSINGCATEGORY][]=32&facet[HOUSINGCATEGORY][]=33&facet[HOUSINGCATEGORY][]=64&facet[HOUSINGCATEGORY][]=65&facet[DATE]=2023-03-31&facet[DATEEND]=2023-04-14&facet[PARTICIPANTSCP][adult]=2"
             data = get_data_all(url, program_cat)
-            if program_cat == ("offers"):
-                with open(f"offers/{offer}.csv", mode="w", newline="") as file:
+            if program_cat == ("offer"):
+                with open(f"offer/{offer}.csv", mode="w", newline="") as file:
                     writer = csv.DictWriter(file, fieldnames=data[0].keys())
                     writer.writeheader()
                     writer.writerows(data)
             else:
-                with open(f"vacations/{vacation}.csv", mode="w", newline="") as file:
+                with open(f"vacation/{vacation}.csv", mode="w", newline="") as file:
                     writer = csv.DictWriter(file, fieldnames=data[0].keys())
                     writer.writeheader()
                     writer.writerows(data)
