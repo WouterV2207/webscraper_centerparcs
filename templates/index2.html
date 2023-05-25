@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Scraping Form</title>
+    <script>
+        function handleProgramChange() {
+            var program = document.getElementById("program").value;
+            var programDate = document.getElementById("program_date");
+            var arr_date = document.getElementById("arr_date");
+            var ret_date = document.getElementById("ret_date");
+            var country = document.getElementById("country");
+            var vacationParkCode = document.getElementById("vacation_park_code");
+            var vacationPark = document.getElementById("vacation_park");
+            var am_children = document.getElementById("am_children");
+            var am_adults = document.getElementById("am_adults");
+            var am_seniors = document.getElementById("am_seniors");
+            var am_pets = document.getElementById("am_pets");
+            var childrenAges = document.getElementById("children_ages");
+            var program_cat = document.getElementById("program_cat");
+            var offer = document.getElementById("offer")
+            var vacation = document.getElementById("vacation")
+            var scrape_country = document.getElementById("scrape_country")
+
+            if (program === "resort") {
+                programDate.style.display = "block";
+                country.style.display = "block";
+                vacationParkCode.style.display = "block";
+                vacationPark.style.display = "block";
+                am_children.style.display = "block";
+                am_adults.style.display = "block";
+                am_seniors.style.display = "block";
+                am_pets.style.display = "block";
+                childrenAges.style.display = "block";
+                program_cat.style.display = "none";
+                vacation.style.display = "none";
+                offer.style.display = "none";
+                scrape_country.style.display = "none";
+
+                if (programDate.value === "yes") {
+                    arr_date.style.display = "block";
+                    ret_date.style.display = "block";
+                } else {
+                    arr_date.style.display = "none";
+                    ret_date.style.display = "none";
+                }
+            } 
+            if (program == "offer/vacation") {
+                programDate.style.display = "none";
+                country.style.display = "none";
+                vacationParkCode.style.display = "none";
+                vacationPark.style.display = "none";
+                am_children.style.display = "none";
+                am_adults.style.display = "none";
+                am_seniors.style.display = "none";
+                am_pets.style.display = "none";
+                childrenAges.style.display = "none";
+                arr_date.style.display = "none";
+                ret_date.style.display = "none";
+                program_cat.style.display = "block";
+                vacation.style.display = "block";
+                offer.style.display = "block";
+                scrape_country.style.display = "none";
+            }
+            if (program == "country") {
+                scrape_country.style.display = "block"
+                programDate.style.display = "block";
+                country.style.display = "none";
+                vacationParkCode.style.display = "none";
+                vacationPark.style.display = "none";
+                am_children.style.display = "block";
+                am_adults.style.display = "block";
+                am_seniors.style.display = "block";
+                am_pets.style.display = "block";
+                childrenAges.style.display = "block";
+                program_cat.style.display = "none";
+                vacation.style.display = "none";
+                offer.style.display = "none";
+                if (programDate.value === "yes") {
+                    arr_date.style.display = "block";
+                    ret_date.style.display = "block";
+                } else {
+                    arr_date.style.display = "none";
+                    ret_date.style.display = "none";
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Data Scraping Form</h1>
+    <form method="POST" action="/" onsubmit="handleProgramChange()">
+        <label for="program">Program:</label>
+        <select name="program" id="program" onchange="handleProgramChange()">
+            <option value="0">Select a program</option>
+            <option value="resort">Resort</option>
+            <option value="country">Country</option>
+            <option value="offer/vacation">Offer/Vacation</option>
+        </select>
+        <br><br>
+            <label for="program_date">Program Date:</label>
+            <select name="program_date" id="program_date" onchange="handleProgramChange()">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+            <br><br>
+        <div id="arr_date">
+            <label for="arr_date">Arrival date:</label>
+            <input type="text" name="arr_date">
+            <br><br>
+        </div>
+        <div id="ret_date">
+            <label for="ret_date">Return date:</label>
+            <input type="text" name="ret_date">
+            <br><br>
+        </div>
+        <div id="country">
+            <label for="country">Country:</label>
+            <input type="text" name="country">
+            <br><br>
+        </div>
+        <div id="vacation_park_code">
+            <label for="vacation_park_code">Vacation Park Code:</label>
+            <input type="text" name="vacation_park_code">
+            <br><br>
+        </div>
+        <div id="vacation_park">
+            <label for="vacation_park">Vacation Park:</label>
+            <input type="text" name="vacation_park">
+            <br><br>
+        </div>
+        <div id="am_adults">
+            <label for="am_adults">Adults:</label>
+            <input type="number" name="am_adults">
+            <br><br>
+        </div>
+        <div id="am_seniors">
+            <label for="am_seniors">Seniors:</label>
+            <input type="number" name="am_seniors">
+            <br><br>
+        </div>
+        <div id="am_pets">
+            <label for="am_pets">Pets:</label>
+            <input type="number" name="am_pets">
+            <br><br>
+        </div>
+        <div id="am_children">
+            <label for="am_children">Children:</label>
+            <input type="number" name="am_children">
+            <br><br>
+        </div>
+        <div id="children_ages">
+            <label for="children_ages">Children Ages:</label>
+            <input type="text" name="children_ages">
+            <br><br>
+        </div>
+            <label for="program_cat">Program Category:</label>
+            <select name="program_cat" id="program_cat" onchange="handleProgramChange()">
+                <option value="offer">Offer</option>
+                <option value="vacation">Vacation</option>
+            </select>
+            <br><br>
+        <div id="offer">
+            <label for="offer">Offer:</label>
+            <input type="text" name="offer">
+            <br><br>
+        </div>
+        <div id="vacation">
+            <label for="vacation">Vacation:</label>
+            <input type="text" name="vacation">
+            <br><br>
+        </div>
+        <div id="scrape_country">
+            <label for="scrape_country">Scrape country:</label>
+            <input type="text" name="scrape_country">
+            <br><br>
+        </div>
+        <input type="submit" value="Submit">
+    </form>
+    {% if message %}
+        <p>{{ message }}</p>
+    {% endif %}
+</body>
+</html>

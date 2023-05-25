@@ -1,11 +1,9 @@
-title,price,amount_of_persons,bedroom,duration,surface,country,vacation_parc,timestamp
-Premium cottage Vernieuwd,€149,2 pers.,1 Slaapkamer,Van di. 14 tot do. 16 mrt.,34 m²,"Nederland, Drenthe, Dalen",De Huttenheugte,"13-03-2023, 09:32:11"
-Comfort cottage Vernieuwd,€199,4 pers.,2 Slaapkamers,Van di. 21 tot do. 23 mrt.,54m²,"Nederland, Drenthe, Dalen",De Huttenheugte,"13-03-2023, 09:32:11"
-Premium cottage Vernieuwd,€239,4 pers.,2 Slaapkamers,Van di. 14 tot do. 16 mrt.,56m²,"Nederland, Drenthe, Dalen",De Huttenheugte,"13-03-2023, 09:32:11"
-VIP cottage Vernieuwd,€299,2 pers.,1 Slaapkamer,Van wo. 29 tot vr. 31 mrt.,32 m²,"Nederland, Drenthe, Dalen",De Huttenheugte,"13-03-2023, 09:32:11"
-VIP cottage Vernieuwd,€349,4 pers.,2 Slaapkamers,Van ma. 13 tot wo. 15 mrt.,59m²,"Nederland, Drenthe, Dalen",De Huttenheugte,"13-03-2023, 09:32:11"
-Premium cottage Vernieuwd,€279,6 pers.,3 Slaapkamers,Van wo. 15 tot vr. 17 mrt.,59m²,"Nederland, Drenthe, Dalen",De Huttenheugte,"13-03-2023, 09:32:12"
-Premium cottage Vernieuwd,€369,8 pers.,4 Slaapkamers,Van ma. 20 tot wo. 22 mrt.,93m²,"Nederland, Drenthe, Dalen",De Huttenheugte,"13-03-2023, 09:32:12"
-VIP cottage Vernieuwd,€399,6 pers.,3 Slaapkamers,Van wo. 22 tot vr. 24 mrt.,93m²,"Nederland, Drenthe, Dalen",De Huttenheugte,"13-03-2023, 09:32:12"
-Comfort cottage Vernieuwd,€489,6 pers.,3 Slaapkamers,Van ma. 22 tot vr. 26 mei.,59m²,"Nederland, Drenthe, Dalen",De Huttenheugte,"13-03-2023, 09:32:12"
-VIP cottage Vernieuwd,€1429,12 pers.,6 Slaapkamers,Van ma. 13 tot vr. 17 mrt.,186m²,"Nederland, Drenthe, Dalen",De Huttenheugte,"13-03-2023, 09:32:12"
+title,new_price,old_price,amount_of_persons,bedroom,duration,surface,country,vacation_parc,timestamp,discount_in_euros,discount_in_percent
+Comfort cottage Vernieuwd,259,359,4 pers.,2 Slaapkamers,Van di. 13 tot do. 15 jun.,54m²,"Nederland, Drenthe, Dalen",De Huttenheugte,"11-04-2023, 15:43:54",100,27
+Comfort cottage Vernieuwd,273,379,6 pers.,3 Slaapkamers,Van di. 13 tot do. 15 jun.,59m²,"Nederland, Drenthe, Dalen",De Huttenheugte,"11-04-2023, 15:43:54",106,27
+Premium cottage Vernieuwd,302,419,4 pers.,2 Slaapkamers,Van ma. 19 tot wo. 21 jun.,56m²,"Nederland, Drenthe, Dalen",De Huttenheugte,"11-04-2023, 15:43:54",117,27
+Premium cottage Vernieuwd,331,459,6 pers.,3 Slaapkamers,Van ma. 12 tot wo. 14 jun.,59m²,"Nederland, Drenthe, Dalen",De Huttenheugte,"11-04-2023, 15:43:55",128,27
+VIP cottage Vernieuwd,432,479,4 pers.,2 Slaapkamers,Van wo. 28 tot vr. 30 jun.,59m²,"Nederland, Drenthe, Dalen",De Huttenheugte,"11-04-2023, 15:43:55",47,9
+VIP cottage Vernieuwd,529,679,6 pers.,3 Slaapkamers,Van ma. 15 tot wo. 17 mei.,93m²,"Nederland, Drenthe, Dalen",De Huttenheugte,"11-04-2023, 15:43:55",150,22
+Premium cottage Vernieuwd,403,559,8 pers.,4 Slaapkamers,Van wo. 14 tot vr. 16 jun.,93m²,"Nederland, Drenthe, Dalen",De Huttenheugte,"11-04-2023, 15:43:55",156,27
+VIP cottage Vernieuwd,882,979,12 pers.,6 Slaapkamers,Van wo. 21 tot vr. 23 jun.,186m²,"Nederland, Drenthe, Dalen",De Huttenheugte,"11-04-2023, 15:43:55",97,9
