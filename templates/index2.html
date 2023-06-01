@@ -1,7 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Data Scraping Form</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <style>
+        .form-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+    </style>
+    <title>Bungalow Scraping Form Center Parcs</title>
     <script>
         function handleProgramChange() {
             var program = document.getElementById("program").value;
@@ -20,6 +28,22 @@
             var offer = document.getElementById("offer")
             var vacation = document.getElementById("vacation")
             var scrape_country = document.getElementById("scrape_country")
+
+                programDate.style.display = "none";
+                country.style.display = "none";
+                vacationParkCode.style.display = "none";
+                vacationPark.style.display = "none";
+                am_children.style.display = "none";
+                am_adults.style.display = "none";
+                am_seniors.style.display = "none";
+                am_pets.style.display = "none";
+                childrenAges.style.display = "none";
+                arr_date.style.display = "none";
+                ret_date.style.display = "none";
+                program_cat.style.display = "none";
+                vacation.style.display = "none";
+                offer.style.display = "none";
+                scrape_country.style.display = "none";
 
             if (program === "resort") {
                 programDate.style.display = "block";
@@ -87,8 +111,9 @@
     </script>
 </head>
 <body>
-    <h1>Data Scraping Form</h1>
+    <h1>Bungalow Scraping Form Center Parcs</h1>
     <form method="POST" action="/" onsubmit="handleProgramChange()">
+        <div class="form-container">
         <label for="program">Program:</label>
         <select name="program" id="program" onchange="handleProgramChange()">
             <option value="0">Select a program</option>
@@ -96,84 +121,101 @@
             <option value="country">Country</option>
             <option value="offer/vacation">Offer/Vacation</option>
         </select>
-        <br><br>
             <label for="program_date">Program Date:</label>
             <select name="program_date" id="program_date" onchange="handleProgramChange()">
                 <option value="yes">Yes</option>
                 <option value="no">No</option>
             </select>
-            <br><br>
         <div id="arr_date">
             <label for="arr_date">Arrival date:</label>
-            <input type="text" name="arr_date">
-            <br><br>
+            <input type="date" name="arr_date">
         </div>
         <div id="ret_date">
             <label for="ret_date">Return date:</label>
-            <input type="text" name="ret_date">
-            <br><br>
+            <input type="date" name="ret_date">
         </div>
         <div id="country">
             <label for="country">Country:</label>
-            <input type="text" name="country">
-            <br><br>
+            <select name="country">
+                <option value="-1">Select a country</option>
+                <option value="belgie">België</option>
+                <option value="nederland">Nederland</option>
+                <option value="duitsland">Duitsland</option>
+                <option value="frankrijk">Frankrijk</option>
+            </select>
         </div>
         <div id="vacation_park_code">
             <label for="vacation_park_code">Vacation Park Code:</label>
             <input type="text" name="vacation_park_code">
-            <br><br>
         </div>
         <div id="vacation_park">
             <label for="vacation_park">Vacation Park:</label>
             <input type="text" name="vacation_park">
-            <br><br>
+        </div>
+        <div id="scrape_country">
+            <label for="scrape_country">Scrape country:</label>
+            <select name="scrape_country">
+                <option value="-1">Select a country</option>
+                <option value="BE">België</option>
+                <option value="NL">Nederland</option>
+                <option value="DE">Duitsland</option>
+                <option value="FR">Frankrijk</option>
+            </select>
         </div>
         <div id="am_adults">
             <label for="am_adults">Adults:</label>
-            <input type="number" name="am_adults">
-            <br><br>
+            <input type="number" name="am_adults" min="0" max="12">
         </div>
         <div id="am_seniors">
             <label for="am_seniors">Seniors:</label>
-            <input type="number" name="am_seniors">
-            <br><br>
+            <input type="number" name="am_seniors" min="0" max="12">
         </div>
         <div id="am_pets">
             <label for="am_pets">Pets:</label>
-            <input type="number" name="am_pets">
-            <br><br>
+            <input type="number" name="am_pets" min="0" max="2">
         </div>
         <div id="am_children">
             <label for="am_children">Children:</label>
-            <input type="number" name="am_children">
-            <br><br>
+            <input type="number" name="am_children" min="0" max="12">
         </div>
         <div id="children_ages">
             <label for="children_ages">Children Ages:</label>
             <input type="text" name="children_ages">
-            <br><br>
         </div>
+        <div id="program_cat">
             <label for="program_cat">Program Category:</label>
             <select name="program_cat" id="program_cat" onchange="handleProgramChange()">
                 <option value="offer">Offer</option>
                 <option value="vacation">Vacation</option>
             </select>
-            <br><br>
+        </div>
         <div id="offer">
             <label for="offer">Offer:</label>
-            <input type="text" name="offer">
-            <br><br>
+            <select name="offer">
+                <option value="-1">Select an offer</option>
+                <option value="last-minutes">Last minutes</option>
+                <option value="ecocheques">Ecocheques</option>
+                <option value="vroegboekvoordeel">Vroegboekvoordeel</option>
+                <option value="familie-55plus-korting">Familiekorting</option>
+                <option value="flexibel-boeken">Flexibelboeken</option>
+                <option value="weekendje-weg-voorjaar">Weekendje weg voorjaar</option>
+            </select>
         </div>
         <div id="vacation">
             <label for="vacation">Vacation:</label>
-            <input type="text" name="vacation">
-            <br><br>
+            <select name="vacation">
+                <option value="-1">Select a vacation</option>
+                <option value="paasvakantie">Paasvakantie</option>
+                <option value="hemelvaart-weekend-weg">Hemelvaart</option>
+                <option value="pinksteren-weekend-weg">Pinksteren</option>
+                <option value="zomervakantie">Zomervakantie</option>
+                <option value="herfstvakantie">Herfstvakantie</option>
+                <option value="11-november">11-november</option>
+                <option value="kerstvakantie">Kerstvakantie</option>
+                <option value="krokusvakantie">Krokusvakantie</option>
+            </select>
         </div>
-        <div id="scrape_country">
-            <label for="scrape_country">Scrape country:</label>
-            <input type="text" name="scrape_country">
-            <br><br>
-        </div>
+    </div>
         <input type="submit" value="Submit">
     </form>
     {% if message %}

@@ -1,0 +1,31 @@
+title,new_price,old_price,amount_of_persons,bedroom,duration,surface,country,vacation_parc,timestamp,discount_in_euros,discount_in_percent
+Comfort cottage,€245,€339,4 pers.,2 Slaapkamers,Van di. 29 tot do. 31 aug.,59 m²,"België, Ardennen, Vielsalm",Les Ardennes,"01-06-2023, 15:07:02",94,27
+Comfort cottage,€109,€169,4 pers.,2 Slaapkamers,Van di. 5 tot do. 7 dec.,50 m²,"België, Ardennen, Vielsalm",Les Ardennes,"01-06-2023, 15:07:02",60,35
+Comfort cottage,€374,€519,6 pers.,3 Slaapkamers,Van vr. 1 tot zo. 3 sept.,75 m²,"België, Ardennen, Vielsalm",Les Ardennes,"01-06-2023, 15:07:02",145,27
+Comfort cottage,€317,€439,6 pers.,3 Slaapkamers,Van di. 29 tot do. 31 aug.,75 m²,"België, Ardennen, Vielsalm",Les Ardennes,"01-06-2023, 15:07:03",122,27
+Premium cottage,€331,€459,4 pers.,2 Slaapkamers,Van di. 29 tot do. 31 aug.,59 m²,"België, Ardennen, Vielsalm",Les Ardennes,"01-06-2023, 15:07:03",128,27
+Premium cottage,€381,€529,6 pers.,3 Slaapkamers,Van di. 29 tot do. 31 aug.,75 m²,"België, Ardennen, Vielsalm",Les Ardennes,"01-06-2023, 15:07:03",148,27
+Premium cottage Vernieuwd,€540,€749,5 pers.,3 Slaapkamers,Van vr. 1 tot zo. 3 sept.,64m²,"België, Limburg, Peer",Erperheide,"01-06-2023, 15:07:04",209,27
+Premium cottage Vernieuwd,€497,€689,4 pers.,2 Slaapkamers,Van vr. 1 tot zo. 3 sept.,64m²,"België, Limburg, Peer",Erperheide,"01-06-2023, 15:07:04",192,27
+Premium cottage Rolstoelvriendelijk Vernieuwd,€497,€689,4 pers.,2 Slaapkamers,Van vr. 1 tot zo. 3 sept.,73m²,"België, Limburg, Peer",Erperheide,"01-06-2023, 15:07:05",192,27
+Comfort cottage Vernieuwd,€432,€599,5 pers.,3 Slaapkamers,Van vr. 1 tot zo. 3 sept.,64m²,"België, Limburg, Peer",Erperheide,"01-06-2023, 15:07:05",167,27
+Comfort cottage Vernieuwd,€396,€549,4 pers.,2 Slaapkamers,Van vr. 1 tot zo. 3 sept.,62m²,"België, Limburg, Peer",Erperheide,"01-06-2023, 15:07:05",153,27
+Premium cottage,€177,€259,4 pers.,2 Slaapkamers,Van wo. 15 tot vr. 17 nov.,59 m²,"België, West-Vlaanderen, De Haan",Park De Haan,"01-06-2023, 15:07:06",82,31
+Premium cottage,€179,€279,5 pers.,3 Slaapkamers,Van wo. 13 tot vr. 15 dec.,66 m²,"België, West-Vlaanderen, De Haan",Park De Haan,"01-06-2023, 15:07:06",100,35
+Comfort cottage,€134,€209,4 pers.,2 Slaapkamers,Van di. 5 tot do. 7 dec.,59 m²,"België, West-Vlaanderen, De Haan",Park De Haan,"01-06-2023, 15:07:06",75,35
+Comfort cottage,€149,€219,5 pers.,3 Slaapkamers,Van wo. 15 tot vr. 17 nov.,66 m²,"België, West-Vlaanderen, De Haan",Park De Haan,"01-06-2023, 15:07:07",70,31
+Rolstoelvriendelijk VIP cottage,€256,€399,4 pers.,2 Slaapkamers,Van di. 28 tot do. 30 nov.,84 m²,"België, Limburg, Dilsen-Stokkem",Terhills Resort,"01-06-2023, 15:07:07",143,35
+VIP cottage,€256,€399,4 pers.,2 Slaapkamers,Van ma. 4 tot wo. 6 dec.,77 m²,"België, Limburg, Dilsen-Stokkem",Terhills Resort,"01-06-2023, 15:07:07",143,35
+Rolstoelvriendelijk VIP cottage,€288,€449,6 pers.,3 Slaapkamers,Van wo. 6 tot vr. 8 dec.,105 m²,"België, Limburg, Dilsen-Stokkem",Terhills Resort,"01-06-2023, 15:07:08",161,35
+VIP cottage,€288,€449,6 pers.,3 Slaapkamers,Van di. 12 tot do. 14 dec.,98 m²,"België, Limburg, Dilsen-Stokkem",Terhills Resort,"01-06-2023, 15:07:08",161,35
+Premium cottage Vernieuwd,€612,€849,6 pers.,3 Slaapkamers,Van vr. 1 tot ma. 4 sept.,75 m²,"België, Limburg, Lommel",De Vossemeren,"01-06-2023, 15:07:08",237,27
+Comfort cottage Vernieuwd,€518,€719,4 pers.,2 Slaapkamers,Van vr. 1 tot zo. 3 sept.,66m²,"België, Limburg, Lommel",De Vossemeren,"01-06-2023, 15:07:09",201,27
+Comfort cottage Vernieuwd,€547,€759,6 pers.,3 Slaapkamers,Van vr. 1 tot zo. 3 sept.,75 m²,"België, Limburg, Lommel",De Vossemeren,"01-06-2023, 15:07:09",212,27
+Premium cottage,€269,€419,4 pers.,2 Slaapkamers,Van ma. 11 tot vr. 15 mrt. 2024,62 m²,"Nederland, Zuid-Holland, Ouddorp",Port Zélande,"01-06-2023, 15:07:09",150,35
+Premium cottage,€301,€469,6 pers.,3 Slaapkamers,Van ma. 15 tot vr. 19 jan. 2024,79 m²,"Nederland, Zuid-Holland, Ouddorp",Port Zélande,"01-06-2023, 15:07:10",168,35
+Rolstoelvriendelijk Premium cottage,€301,€469,6 pers.,3 Slaapkamers,Van ma. 15 tot vr. 19 jan. 2024,79m²,"Nederland, Zuid-Holland, Ouddorp",Port Zélande,"01-06-2023, 15:07:10",168,35
+Premium cottage Vernieuwd,€576,€799,4 pers.,2 Slaapkamers,Van vr. 1 tot ma. 4 sept.,54 m²,"Nederland, Noord-Brabant, Westerhoven",De Kempervennen,"01-06-2023, 15:07:10",223,27
+Premium cottage Vernieuwd,€619,€859,5 pers.,3 Slaapkamers,Van vr. 1 tot zo. 3 sept.,59m²,"Nederland, Noord-Brabant, Westerhoven",De Kempervennen,"01-06-2023, 15:07:11",240,27
+Premium cottage Vernieuwd,€384,€599,6 pers.,3 Slaapkamers,Van vr. 15 tot ma. 18 dec.,54m²,"Nederland, Noord-Brabant, Westerhoven",De Kempervennen,"01-06-2023, 15:07:11",215,35
+Premium cottage Vernieuwd,€384,€599,6 pers.,3 Slaapkamers,Van ma. 4 tot vr. 8 dec.,96 m²,"Nederland, Noord-Brabant, Westerhoven",De Kempervennen,"01-06-2023, 15:07:12",215,35
+Comfort cottage,€432,€599,4 pers.,2 Slaapkamers,Van vr. 1 tot ma. 4 sept.,60 m²,"Frankrijk, Picardië, Laon",Le Lac d’Ailette,"01-06-2023, 15:07:12",167,27

@@ -25,7 +25,7 @@ def get_data_all(url, program_cat) -> list:
                 EC.presence_of_element_located((By.CSS_SELECTOR, "a.js-searchPagination"))
             )
             element.click()
-            time.sleep(3)
+            time.sleep(5)
         except:
             break
     # Find information about each cottage on the page
@@ -266,12 +266,12 @@ def main():
                 url = f"https://www.centerparcs.be/be-vl/{vacation}_sck?market=be&language=vl&c=CPE_SINGLECLICK&univers=cpe&type=SINGLECLICK&item=695&currency=EUR&group=housing&sort=popularity_housing&asc=asc&page=1&nb=10&displayPrice=default&dateuser=0&facet[HOUSINGCATEGORY][]=COMFORT&facet[HOUSINGCATEGORY][]=PREMIUM&facet[HOUSINGCATEGORY][]=VIP&facet[HOUSINGCATEGORY][]=EXCLUSIVE&facet[HOUSINGCATEGORY][]=25&facet[HOUSINGCATEGORY][]=31&facet[HOUSINGCATEGORY][]=32&facet[HOUSINGCATEGORY][]=33&facet[HOUSINGCATEGORY][]=64&facet[HOUSINGCATEGORY][]=65&facet[DATE]=2023-03-31&facet[DATEEND]=2023-04-14&facet[PARTICIPANTSCP][adult]=2"
             data = get_data_all(url, program_cat)
             if program_cat == ("offer"):
-                with open(f"offer/{offer}.csv", mode="w", newline="") as file:
+                with open(f"offers/{offer}.csv", mode="w", newline="") as file:
                     writer = csv.DictWriter(file, fieldnames=data[0].keys())
                     writer.writeheader()
                     writer.writerows(data)
             else:
-                with open(f"vacation/{vacation}.csv", mode="w", newline="") as file:
+                with open(f"vacations/{vacation}.csv", mode="w", newline="") as file:
                     writer = csv.DictWriter(file, fieldnames=data[0].keys())
                     writer.writeheader()
                     writer.writerows(data)
