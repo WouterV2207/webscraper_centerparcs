@@ -1,5 +1,5 @@
 import csv
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, send_file
 
 from webscraper_full import get_data
 from webscraper_full import get_data_all
@@ -34,12 +34,12 @@ def index():
                 for age in children_ages:
                     url += f"&facet[PARTICIPANTSCP][ages][]={age}"
             data = get_data(url)
-            filename = f"{vacation_park}.csv"
+            filename = f"{country}/{vacation_park}.csv"
             with open(filename, mode="w", newline="", encoding="utf-8") as file:
                 writer = csv.DictWriter(file, fieldnames=data[0].keys())
                 writer.writeheader()
                 writer.writerows(data)
-            return render_template('index2.html', message=f"Data scraped and saved as {filename}")
+            return send_file(filename, as_attachment=True)
        elif program == "offer/vacation":
            program_cat = request.form['program_cat']
            offer = request.form['offer']
@@ -47,20 +47,21 @@ def index():
            if (program_cat == "offer"):
                url = f"https://www.centerparcs.be/be-vl/{offer}_sck?market=be&language=vl&c=CPE_SINGLECLICK_V3&univers=cpe&type=SINGLECLICK_V3&item=280&currency=EUR&group=housing&sort=popularity_housing&asc=asc&page=1&nb=10&displayPrice=default&dateuser=0&facet[HOUSINGCATEGORY][]=COMFORT&facet[HOUSINGCATEGORY][]=PREMIUM&facet[HOUSINGCATEGORY][]=VIP&facet[HOUSINGCATEGORY][]=EXCLUSIVE&facet[HOUSINGCATEGORY][]=25&facet[HOUSINGCATEGORY][]=31&facet[HOUSINGCATEGORY][]=32&facet[HOUSINGCATEGORY][]=33&facet[HOUSINGCATEGORY][]=37&facet[HOUSINGCATEGORY][]=64&facet[HOUSINGCATEGORY][]=65&facet[PARTICIPANTSCP][adult]=2"
                data = get_data_all(url, program_cat)
-               filename = f"{offer}.csv"
+               filename = f"offers/{offer}.csv"
                with open(filename, mode="w", newline="", encoding="utf-8") as file:
                     writer = csv.DictWriter(file, fieldnames=data[0].keys())
                     writer.writeheader()
                     writer.writerows(data)
+               return send_file(filename, as_attachment=True)
            else:
                url = f"https://www.centerparcs.be/be-vl/{vacation}_sck?market=be&language=vl&c=CPE_SINGLECLICK&univers=cpe&type=SINGLECLICK&item=695&currency=EUR&group=housing&sort=popularity_housing&asc=asc&page=1&nb=10&displayPrice=default&dateuser=0&facet[HOUSINGCATEGORY][]=COMFORT&facet[HOUSINGCATEGORY][]=PREMIUM&facet[HOUSINGCATEGORY][]=VIP&facet[HOUSINGCATEGORY][]=EXCLUSIVE&facet[HOUSINGCATEGORY][]=25&facet[HOUSINGCATEGORY][]=31&facet[HOUSINGCATEGORY][]=32&facet[HOUSINGCATEGORY][]=33&facet[HOUSINGCATEGORY][]=64&facet[HOUSINGCATEGORY][]=65&facet[DATE]=2023-03-31&facet[DATEEND]=2023-04-14&facet[PARTICIPANTSCP][adult]=2"
                data = get_data_all(url, program_cat)
-               filename = f"{vacation}.csv"
+               filename = f"vacations/{vacation}.csv"
                with open(filename, mode="w", newline="", encoding="utf-8") as file:
                     writer = csv.DictWriter(file, fieldnames=data[0].keys())
                     writer.writeheader()
                     writer.writerows(data)
-               return render_template('index2.html', message=f"Data scraped and saved as {filename}")
+               return send_file(filename, as_attachment=True)
        elif program == "country":
            program_cat = "cottages"
            scrape_country = request.form['scrape_country']
@@ -84,12 +85,12 @@ def index():
                 for age in children_ages:
                     url += f"&facet[PARTICIPANTSCP][ages][]={age}"
            data = get_data_all(url, program_cat)
-           filename = f"{scrape_country}.csv"
+           filename = f"countries/{scrape_country}.csv"
            with open(filename, mode="w", newline="", encoding="utf-8") as file:
                 writer = csv.DictWriter(file, fieldnames=data[0].keys())
                 writer.writeheader()
                 writer.writerows(data)
-           return render_template('index2.html', message=f"Data scraped and saved as {filename}")
+           return send_file(filename, as_attachment=True)
        return render_template('index2.html', message=None)
    return render_template('index2.html', message=None)
 if __name__ == '__main__':
