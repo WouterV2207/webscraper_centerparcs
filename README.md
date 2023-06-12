@@ -1,4 +1,5 @@
-#Center Parcs Cottage Web Scraper
+Center Parcs Cottage Web Scraper
+
 This repository contains a web scraper script written in Python that allows you to scrape cottage information from the Center Parcs website. The scraper collects data such as: 
 - Title
 - New price
